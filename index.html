@@ -30,7 +30,7 @@ body{
 
 
 
-/* ===== TRANG BÌA ===== */
+/* ===== COVER ===== */
 
 
 .cover{
@@ -61,7 +61,6 @@ body{
     background-position:center;
 
 }
-
 
 
 
@@ -123,32 +122,35 @@ h1{
 
 
 
+
 @keyframes showText{
+
 
 from{
 
-    opacity:0;
+opacity:0;
 
-    transform:translateY(30px);
+transform:translateY(30px);
 
 }
 
 
 to{
 
-    opacity:1;
+opacity:1;
 
-    transform:translateY(0);
-
-}
+transform:translateY(0);
 
 }
 
 
+}
 
 
 
-/* ===== CÁNH HOA ===== */
+
+
+/* ===== PETALS ===== */
 
 
 .petals{
@@ -160,6 +162,8 @@ to{
     overflow:hidden;
 
     pointer-events:none;
+
+    z-index:5;
 
 }
 
@@ -175,11 +179,17 @@ to{
 
     height:15px;
 
+
     background:#f2c7c9;
 
-    border-radius:100% 0 100% 0;
 
-    opacity:0.8;
+    border-radius:
+
+    100% 0 100% 0;
+
+
+    opacity:.8;
+
 
     animation:fall linear infinite;
 
@@ -243,13 +253,16 @@ animation-duration:20s;
 
 
 
+
 @keyframes fall{
 
 
 from{
 
 transform:
+
 translateY(-50px)
+
 rotate(0deg);
 
 }
@@ -258,7 +271,9 @@ rotate(0deg);
 to{
 
 transform:
+
 translateY(110vh)
+
 rotate(360deg);
 
 }
@@ -271,83 +286,174 @@ rotate(360deg);
 
 
 
-/* ===== NÚT NHẠC ===== */
+
+/* ===== MUSIC BUTTON ===== */
 
 
-#musicBtn {
-
-    position: fixed;
-
-    right: 25px;
-
-    bottom: 25px;
+.music-wrapper{
 
 
-    width: 58px;
-
-    height: 58px;
+    position:fixed;
 
 
-    border-radius: 50%;
+    right:25px;
 
 
-    border: 1px solid rgba(160,120,70,0.5);
+    bottom:25px;
 
 
-    background: rgba(255,250,240,0.9);
+    width:75px;
 
 
-    color: #8b6b45;
-
-
-    font-size: 26px;
-
-
-    cursor: pointer;
+    height:75px;
 
 
     display:flex;
 
+
     align-items:center;
+
 
     justify-content:center;
 
 
-    box-shadow:
-
-    0 8px 20px rgba(90,70,40,0.25);
-
-
     z-index:20;
 
-
-    animation:pulse 2.5s infinite;
 
 }
 
 
 
 
-@keyframes pulse {
+#musicBtn{
+
+
+    width:58px;
+
+
+    height:58px;
+
+
+    border-radius:50%;
+
+
+    border:
+
+    1px solid rgba(160,120,70,.5);
+
+
+
+    background:
+
+    rgba(255,250,240,.95);
+
+
+
+    color:#8b6b45;
+
+
+
+    font-size:27px;
+
+
+
+    cursor:pointer;
+
+
+
+    display:flex;
+
+
+
+    align-items:center;
+
+
+
+    justify-content:center;
+
+
+
+    position:relative;
+
+
+
+    z-index:2;
+
+
+
+    box-shadow:
+
+    0 8px 20px rgba(90,70,40,.25);
+
+
+
+}
+
+
+
+/* vòng sóng */
+
+
+.sound-wave{
+
+
+    position:absolute;
+
+
+    width:58px;
+
+
+    height:58px;
+
+
+    border-radius:50%;
+
+
+    border:
+
+    1px solid rgba(160,120,70,.45);
+
+
+
+    opacity:0;
+
+
+
+}
+
+
+
+
+
+.music-wrapper.playing .sound-wave{
+
+
+    animation:
+
+    wave 1.8s infinite;
+
+
+}
+
+
+
+@keyframes wave{
 
 
 0%{
 
 transform:scale(1);
 
-}
-
-
-50%{
-
-transform:scale(1.08);
+opacity:.8;
 
 }
 
 
 100%{
 
-transform:scale(1);
+transform:scale(1.8);
+
+opacity:0;
 
 }
 
@@ -358,7 +464,7 @@ transform:scale(1);
 
 
 
-/* ===== MOBILE ===== */
+/* MOBILE */
 
 
 @media(max-width:600px){
@@ -369,7 +475,6 @@ h1{
 font-size:40px;
 
 }
-
 
 
 .date{
@@ -385,6 +490,7 @@ font-size:18px;
 
 </style>
 
+
 </head>
 
 
@@ -393,7 +499,7 @@ font-size:18px;
 
 
 
-<!-- Nhạc nền -->
+<!-- MUSIC -->
 
 <audio id="music" loop>
 
@@ -404,7 +510,13 @@ font-size:18px;
 
 
 
-<!-- Nút nhạc -->
+<!-- MUSIC BUTTON -->
+
+<div class="music-wrapper">
+
+
+<div class="sound-wave"></div>
+
 
 <button id="musicBtn">
 
@@ -413,10 +525,14 @@ font-size:18px;
 </button>
 
 
+</div>
 
 
 
-<!-- Cánh hoa -->
+
+
+<!-- PETALS -->
+
 
 <div class="petals">
 
@@ -438,7 +554,8 @@ font-size:18px;
 
 
 
-<!-- Nội dung -->
+<!-- COVER -->
+
 
 <section class="cover">
 
@@ -457,7 +574,6 @@ CÔ DÂU
 <br>
 
 CHÚ RỂ
-
 
 </h1>
 
@@ -478,6 +594,7 @@ SAVE THE DATE
 </div>
 
 
+
 </div>
 
 
@@ -488,15 +605,25 @@ SAVE THE DATE
 
 
 
+
 <script>
 
 
 const music =
+
 document.getElementById("music");
 
 
+
 const btn =
+
 document.getElementById("musicBtn");
+
+
+
+const musicBox =
+
+document.querySelector(".music-wrapper");
 
 
 
@@ -504,15 +631,23 @@ let playing=false;
 
 
 
+
 btn.onclick=function(){
+
 
 
 if(playing){
 
 
+
 music.pause();
 
+
 btn.innerHTML="🎵";
+
+
+musicBox.classList.remove("playing");
+
 
 
 }
@@ -522,13 +657,20 @@ else{
 
 music.play();
 
-btn.innerHTML="⏸";
+
+btn.innerHTML="♫";
+
+
+musicBox.classList.add("playing");
+
 
 
 }
 
 
+
 playing=!playing;
+
 
 
 }
@@ -540,5 +682,6 @@ playing=!playing;
 
 
 </body>
+
 
 </html>
