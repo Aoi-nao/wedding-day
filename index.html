@@ -90,13 +90,103 @@ h1 {
 
 
 
+/* Hiệu ứng cánh hoa */
+
+.petals {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    pointer-events:none;
+    overflow:hidden;
+}
+
+
+.petals span {
+
+    position:absolute;
+
+    top:-50px;
+
+    font-size:22px;
+
+    animation: fall linear infinite;
+
+    opacity:0.8;
+
+}
+
+
+/* vị trí từng cánh */
+
+.petals span:nth-child(1){
+    left:10%;
+    animation-duration:12s;
+}
+
+.petals span:nth-child(2){
+    left:25%;
+    animation-duration:16s;
+}
+
+.petals span:nth-child(3){
+    left:40%;
+    animation-duration:14s;
+}
+
+.petals span:nth-child(4){
+    left:55%;
+    animation-duration:18s;
+}
+
+.petals span:nth-child(5){
+    left:70%;
+    animation-duration:13s;
+}
+
+.petals span:nth-child(6){
+    left:80%;
+    animation-duration:17s;
+}
+
+.petals span:nth-child(7){
+    left:90%;
+    animation-duration:15s;
+}
+
+.petals span:nth-child(8){
+    left:35%;
+    animation-duration:20s;
+}
+
+
+
+@keyframes fall {
+
+0% {
+    transform:
+    translateY(-50px)
+    rotate(0deg);
+}
+
+
+100% {
+
+    transform:
+    translateY(110vh)
+    rotate(360deg);
+
+}
+
+}
 </style>
 
 </head>
 
 
 
-<body>
+
 
 
 <section class="cover">
@@ -127,6 +217,16 @@ SAVE THE DATE
 
 
 </body>
+    <div class="petals">
+    <span>🌸</span>
+    <span>🌸</span>
+    <span>🌸</span>
+    <span>🌸</span>
+    <span>🌸</span>
+    <span>🌸</span>
+    <span>🌸</span>
+    <span>🌸</span>
+</div>
 
 
 </html>
