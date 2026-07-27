@@ -658,7 +658,167 @@ opacity:0;
 }
 
 
+/* ===== COUPLE ===== */
 
+
+.couple{
+
+min-height:100vh;
+
+background:#faf7f2;
+
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+
+gap:60px;
+
+
+text-align:center;
+
+
+padding:80px 20px;
+
+
+}
+
+
+
+
+.photo-placeholder{
+
+
+width:220px;
+
+
+height:280px;
+
+
+background:
+
+linear-gradient(
+135deg,
+#f4eee6,
+#eee2d5
+);
+
+
+
+border-radius:
+
+120px 120px 0 0;
+
+
+position:relative;
+
+
+overflow:hidden;
+
+
+}
+
+
+
+
+
+.photo-placeholder::after{
+
+
+content:"♡";
+
+
+position:absolute;
+
+
+top:50%;
+
+
+left:50%;
+
+
+transform:
+
+translate(-50%,-50%);
+
+
+
+font-size:40px;
+
+
+color:#c9ae85;
+
+
+}
+
+
+
+
+.role{
+
+
+margin-top:25px;
+
+
+font-size:13px;
+
+
+letter-spacing:5px;
+
+
+}
+
+
+
+.person-name{
+
+
+margin-top:15px;
+
+
+font-size:35px;
+
+
+letter-spacing:8px;
+
+
+}
+
+
+
+.heart{
+
+
+font-size:45px;
+
+
+color:#b79b6c;
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+.couple{
+
+
+flex-direction:column;
+
+
+gap:30px;
+
+
+}
+
+
+
+}
 </style>
 
 </head>
@@ -829,7 +989,66 @@ trân trọng kính mời
 
 
 
+<!-- COUPLE -->
 
+<section class="couple">
+
+
+<div class="person">
+
+
+<div class="photo-placeholder">
+</div>
+
+
+<div class="role">
+CÔ DÂU
+</div>
+
+
+<div class="person-name">
+CHUN
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="heart">
+
+♡
+
+</div>
+
+
+
+
+
+<div class="person">
+
+
+<div class="photo-placeholder">
+</div>
+
+
+<div class="role">
+CHÚ RỂ
+</div>
+
+
+<div class="person-name">
+DAM
+</div>
+
+
+</div>
+
+
+
+</section>
 <!-- PETALS -->
 
 
