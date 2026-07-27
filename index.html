@@ -658,30 +658,34 @@ opacity:0;
 }
 
 
-/* ===== COUPLE ===== */
+/* ===== COUPLE SECTION ===== */
 
 
 .couple{
 
+
 min-height:100vh;
+
 
 background:#faf7f2;
 
 
 display:flex;
 
+
 justify-content:center;
+
 
 align-items:center;
 
 
-gap:60px;
+gap:70px;
+
+
+padding:100px 30px;
 
 
 text-align:center;
-
-
-padding:80px 20px;
 
 
 }
@@ -689,28 +693,102 @@ padding:80px 20px;
 
 
 
+
+.person{
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+align-items:center;
+
+
+}
+
+
+
+
+
+.role{
+
+
+font-size:12px;
+
+
+letter-spacing:6px;
+
+
+color:#8b7560;
+
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.photo-frame{
+
+
+width:240px;
+
+
+height:300px;
+
+
+border-radius:50%;
+
+
+padding:8px;
+
+
+background:white;
+
+
+box-shadow:
+
+
+0 20px 45px rgba(100,80,50,.12);
+
+
+
+}
+
+
+
+
+
 .photo-placeholder{
 
 
-width:220px;
+width:100%;
 
 
-height:280px;
+height:100%;
+
+
+border-radius:50%;
 
 
 background:
 
+
 linear-gradient(
+
 135deg,
-#f4eee6,
-#eee2d5
+
+#f5eee4,
+
+#e9dccb
+
 );
 
-
-
-border-radius:
-
-120px 120px 0 0;
 
 
 position:relative;
@@ -745,60 +823,51 @@ transform:
 translate(-50%,-50%);
 
 
-
-font-size:40px;
-
-
-color:#c9ae85;
+font-size:42px;
 
 
-}
-
-
-
-
-.role{
-
-
-margin-top:25px;
-
-
-font-size:13px;
-
-
-letter-spacing:5px;
+color:#c6a878;
 
 
 }
+
+
 
 
 
 .person-name{
 
 
-margin-top:15px;
+margin-top:30px;
 
 
-font-size:35px;
+font-size:38px;
 
 
-letter-spacing:8px;
+font-weight:normal;
+
+
+letter-spacing:10px;
 
 
 }
 
 
 
-.heart{
 
 
-font-size:45px;
+.symbol{
+
+
+font-size:35px;
 
 
 color:#b79b6c;
 
 
 }
+
+
 
 
 
@@ -811,11 +880,27 @@ color:#b79b6c;
 flex-direction:column;
 
 
-gap:30px;
+gap:35px;
 
 
 }
 
+
+
+.photo-frame{
+
+
+width:220px;
+
+
+height:280px;
+
+
+}
+
+
+
+}
 
 
 }
@@ -997,31 +1082,41 @@ trân trọng kính mời
 <div class="person">
 
 
-<div class="photo-placeholder">
-</div>
-
-
 <div class="role">
 CÔ DÂU
 </div>
 
 
+<div class="photo-frame">
+
+<div class="photo-placeholder">
+
+</div>
+
+</div>
+
+
+
 <div class="person-name">
+
 CHUN
-</div>
-
 
 </div>
 
 
+</div>
 
 
 
-<div class="heart">
 
-♡
+
+
+<div class="symbol">
+
+✦
 
 </div>
+
 
 
 
@@ -1030,17 +1125,29 @@ CHUN
 <div class="person">
 
 
-<div class="photo-placeholder">
-</div>
-
-
 <div class="role">
+
 CHÚ RỂ
+
 </div>
+
+
+<div class="photo-frame">
+
+
+<div class="photo-placeholder">
+
+</div>
+
+
+</div>
+
 
 
 <div class="person-name">
+
 DAM
+
 </div>
 
 
