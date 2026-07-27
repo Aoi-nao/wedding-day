@@ -20,13 +20,15 @@ body{
 
 margin:0;
 
-font-family:"Times New Roman", serif;
+font-family:"Times New Roman",serif;
 
 color:#6b5140;
 
-overflow:hidden;
+overflow-x:hidden;
 
 }
+
+
 
 
 
@@ -62,17 +64,14 @@ background-size:cover;
 
 background-position:center;
 
-
 z-index:50;
 
 
-transition:
-
-opacity 1.5s ease,
-
+transition:opacity 1.5s ease,
 visibility 1.5s;
 
 }
+
 
 
 
@@ -92,7 +91,6 @@ visibility:hidden;
 animation:fadeUp 2s ease;
 
 }
-
 
 
 
@@ -126,6 +124,7 @@ line-height:1.35;
 
 
 
+
 .amp{
 
 font-size:35px;
@@ -148,15 +147,14 @@ letter-spacing:6px;
 
 
 
+
 .open-btn{
 
 
 margin-top:55px;
 
 
-padding:
-
-14px 45px;
+padding:14px 45px;
 
 
 border:
@@ -188,6 +186,7 @@ cursor:pointer;
 
 
 
+
 .open-btn:hover{
 
 background:white;
@@ -197,13 +196,15 @@ background:white;
 
 
 
-/* ===== MAIN ===== */
+
+
+/* ===== MAIN INVITATION ===== */
 
 
 .main{
 
 
-height:100vh;
+min-height:100vh;
 
 
 display:flex;
@@ -223,9 +224,10 @@ background:
 
 
 linear-gradient(
-rgba(250,247,242,.55),
-rgba(250,247,242,.55)
+rgba(250,247,242,.75),
+rgba(250,247,242,.75)
 ),
+
 
 url("images/cover.jpg");
 
@@ -233,43 +235,96 @@ url("images/cover.jpg");
 
 background-size:cover;
 
-
 background-position:center;
 
 
-}
-
-
-
-.main h1{
-
-
-font-size:65px;
-
-
-font-weight:normal;
-
-
-letter-spacing:12px;
-
+padding:50px 25px;
 
 }
 
 
 
-.main-date{
+
+.invitation{
+
+
+max-width:600px;
+
+
+animation:fadeUp 2s ease;
+
+
+}
+
+
+
+
+
+.invite-title{
+
+
+font-size:30px;
+
+
+line-height:1.8;
+
+
+letter-spacing:3px;
+
+
+}
+
+
+
+.invitation p{
 
 
 margin-top:35px;
 
 
-font-size:22px;
+font-size:18px;
 
 
-letter-spacing:7px;
+line-height:2;
+
+
+letter-spacing:2px;
 
 
 }
+
+
+
+.divider{
+
+
+margin:40px 0;
+
+
+font-size:28px;
+
+
+color:#b79b6c;
+
+
+}
+
+
+
+.family-text{
+
+
+font-size:19px;
+
+
+letter-spacing:4px;
+
+
+line-height:2;
+
+
+}
+
 
 
 
@@ -297,16 +352,10 @@ transform:translateY(0);
 
 
 }
-
-
-
-
-
-/* ===== PETALS ===== */
+  /* ===== PETALS ===== */
 
 
 .petals{
-
 
 position:fixed;
 
@@ -318,7 +367,6 @@ pointer-events:none;
 
 z-index:10;
 
-
 }
 
 
@@ -328,11 +376,15 @@ z-index:10;
 
 position:absolute;
 
+
 top:-30px;
+
 
 width:15px;
 
+
 height:15px;
+
 
 
 background:#f2c7c9;
@@ -346,10 +398,12 @@ border-radius:
 opacity:.75;
 
 
+
 animation:fall linear infinite;
 
 
 }
+
 
 
 
@@ -409,6 +463,7 @@ animation-duration:20s;
 
 
 
+
 @keyframes fall{
 
 
@@ -440,7 +495,9 @@ rotate(360deg);
 
 
 
-/* ===== MUSIC ===== */
+
+
+/* ===== MUSIC BUTTON ===== */
 
 
 .music-wrapper{
@@ -473,6 +530,7 @@ align-items:center;
 z-index:30;
 
 
+
 opacity:0;
 
 
@@ -485,10 +543,11 @@ transition:1s;
 
 .music-wrapper.show{
 
+
 opacity:1;
 
-}
 
+}
 
 
 
@@ -610,7 +669,9 @@ opacity:0;
 
 
 
-<!-- Opening -->
+
+<!-- OPENING -->
+
 
 <div class="opening" id="opening">
 
@@ -623,6 +684,7 @@ opacity:0;
 WEDDING INVITATION
 
 </div>
+
 
 
 
@@ -656,6 +718,7 @@ DAM
 
 
 
+
 <button class="open-btn" id="openBtn">
 
 MỞ THIỆP
@@ -674,7 +737,9 @@ MỞ THIỆP
 
 
 
-<!-- Music -->
+
+
+<!-- MUSIC -->
 
 
 <audio id="music" loop>
@@ -687,39 +752,74 @@ MỞ THIỆP
 
 
 
-<!-- Main -->
+
+
+
+<!-- MAIN CONTENT -->
 
 
 <section class="main">
 
 
-<div>
+<div class="invitation">
 
 
-<h1>
+<div class="invite-title">
 
-CHUN
 
-<br>
+Một ngày đặc biệt,<br>
 
-&
+một khoảnh khắc đáng nhớ
 
-<br>
 
-DAM
-
-</h1>
+</div>
 
 
 
-<div class="main-date">
 
-17 • 10 • 2026
+
+<p>
+
+
+Chúng tôi rất hạnh phúc<br>
+
+khi được chia sẻ niềm vui này<br>
+
+cùng bạn
+
+
+</p>
+
+
+
+
+
+
+<div class="divider">
+
+♡
 
 </div>
 
 
+
+
+
+
+<div class="family-text">
+
+
+Gia đình hai bên<br>
+
+trân trọng kính mời
+
+
 </div>
+
+
+
+</div>
+
 
 
 </section>
@@ -730,7 +830,7 @@ DAM
 
 
 
-<!-- Petals -->
+<!-- PETALS -->
 
 
 <div class="petals">
@@ -757,7 +857,8 @@ DAM
 
 
 
-<!-- Music Button -->
+
+<!-- MUSIC BUTTON -->
 
 
 <div class="music-wrapper" id="musicBox">
@@ -811,28 +912,35 @@ let playing=false;
 
 
 
+
 openBtn.onclick=function(){
 
 
 opening.classList.add("hide");
 
 
+
 music.play();
+
 
 
 musicBox.classList.add("show");
 
 
+
 musicBox.classList.add("playing");
 
 
+
 musicBtn.innerHTML="♫";
+
 
 
 playing=true;
 
 
 }
+
 
 
 
@@ -852,6 +960,7 @@ musicBtn.innerHTML="🎵";
 musicBox.classList.remove("playing");
 
 
+
 }
 
 else{
@@ -864,6 +973,7 @@ musicBtn.innerHTML="♫";
 
 
 musicBox.classList.add("playing");
+
 
 
 }
@@ -879,7 +989,7 @@ playing=!playing;
 </script>
 
 
-</body>
 
+</body>
 
 </html>
