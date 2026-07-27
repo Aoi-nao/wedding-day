@@ -6,7 +6,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Thiệp Cưới CHUN & DAM</title>
+<title>CHUN & DAM Wedding</title>
+
 
 <style>
 
@@ -14,15 +15,23 @@
 box-sizing:border-box;
 }
 
+
 body{
+
 margin:0;
+
 font-family:"Times New Roman", serif;
+
 color:#6b5140;
+
 overflow:hidden;
+
 }
 
 
-/* ===== MÀN HÌNH MỞ THIỆP ===== */
+
+/* ===== OPENING ===== */
+
 
 .opening{
 
@@ -53,7 +62,9 @@ background-size:cover;
 
 background-position:center;
 
+
 z-index:50;
+
 
 transition:
 
@@ -62,6 +73,7 @@ opacity 1.5s ease,
 visibility 1.5s;
 
 }
+
 
 
 .opening.hide{
@@ -73,6 +85,8 @@ visibility:hidden;
 }
 
 
+
+
 .open-content{
 
 animation:fadeUp 2s ease;
@@ -80,15 +94,20 @@ animation:fadeUp 2s ease;
 }
 
 
+
+
+
 .small-title{
 
-font-size:15px;
+font-size:14px;
 
-letter-spacing:5px;
+letter-spacing:6px;
 
 margin-bottom:45px;
 
 }
+
+
 
 
 
@@ -105,11 +124,14 @@ line-height:1.35;
 }
 
 
+
+
 .amp{
 
 font-size:35px;
 
 }
+
 
 
 
@@ -128,13 +150,19 @@ letter-spacing:6px;
 
 .open-btn{
 
+
 margin-top:55px;
 
-padding:14px 45px;
+
+padding:
+
+14px 45px;
+
 
 border:
 
 1px solid rgba(130,100,70,.5);
+
 
 
 background:
@@ -142,35 +170,57 @@ background:
 rgba(255,255,255,.45);
 
 
+
 font-size:14px;
+
 
 letter-spacing:5px;
 
+
 color:#6b5140;
 
+
 cursor:pointer;
+
 
 }
 
 
 
-/* ===== TRANG CHÍNH ===== */
+
+.open-btn:hover{
+
+background:white;
+
+}
+
+
+
+
+/* ===== MAIN ===== */
 
 
 .main{
 
+
 height:100vh;
+
 
 display:flex;
 
+
 justify-content:center;
 
+
 align-items:center;
+
 
 text-align:center;
 
 
+
 background:
+
 
 linear-gradient(
 rgba(250,247,242,.55),
@@ -180,9 +230,12 @@ rgba(250,247,242,.55)
 url("images/cover.jpg");
 
 
+
 background-size:cover;
 
+
 background-position:center;
+
 
 }
 
@@ -190,11 +243,15 @@ background-position:center;
 
 .main h1{
 
+
 font-size:65px;
+
 
 font-weight:normal;
 
+
 letter-spacing:12px;
+
 
 }
 
@@ -202,17 +259,24 @@ letter-spacing:12px;
 
 .main-date{
 
+
+margin-top:35px;
+
+
 font-size:22px;
+
 
 letter-spacing:7px;
 
-margin-top:35px;
 
 }
 
 
 
+
+
 @keyframes fadeUp{
+
 
 from{
 
@@ -222,6 +286,7 @@ transform:translateY(40px);
 
 }
 
+
 to{
 
 opacity:1;
@@ -230,14 +295,18 @@ transform:translateY(0);
 
 }
 
+
 }
 
 
 
-/* ===== CÁNH HOA ===== */
+
+
+/* ===== PETALS ===== */
 
 
 .petals{
+
 
 position:fixed;
 
@@ -249,10 +318,13 @@ pointer-events:none;
 
 z-index:10;
 
+
 }
 
 
+
 .petal{
+
 
 position:absolute;
 
@@ -262,97 +334,150 @@ width:15px;
 
 height:15px;
 
+
 background:#f2c7c9;
 
-border-radius:100% 0 100% 0;
+
+border-radius:
+
+100% 0 100% 0;
+
 
 opacity:.75;
 
+
 animation:fall linear infinite;
 
+
 }
+
 
 
 .petal:nth-child(1){
+
 left:10%;
+
 animation-duration:12s;
+
 }
+
 
 .petal:nth-child(2){
+
 left:25%;
+
 animation-duration:16s;
+
 }
+
 
 .petal:nth-child(3){
+
 left:40%;
+
 animation-duration:13s;
+
 }
+
 
 .petal:nth-child(4){
+
 left:60%;
+
 animation-duration:18s;
+
 }
+
 
 .petal:nth-child(5){
+
 left:75%;
+
 animation-duration:15s;
+
 }
 
+
 .petal:nth-child(6){
+
 left:90%;
+
 animation-duration:20s;
+
 }
+
 
 
 
 @keyframes fall{
 
+
 from{
 
 transform:
+
 translateY(-50px)
+
 rotate(0deg);
 
 }
 
+
 to{
 
 transform:
+
 translateY(110vh)
+
 rotate(360deg);
 
 }
 
+
 }
 
 
 
-/* ===== NÚT NHẠC ===== */
+
+
+/* ===== MUSIC ===== */
 
 
 .music-wrapper{
 
+
 position:fixed;
+
 
 right:25px;
 
+
 bottom:25px;
+
 
 width:70px;
 
+
 height:70px;
+
 
 display:flex;
 
+
 justify-content:center;
+
 
 align-items:center;
 
+
 z-index:30;
+
 
 opacity:0;
 
+
 transition:1s;
+
 
 }
 
@@ -366,57 +491,92 @@ opacity:1;
 
 
 
+
+
 #musicBtn{
+
 
 width:55px;
 
+
 height:55px;
+
 
 border-radius:50%;
 
-border:1px solid rgba(160,120,70,.5);
 
-background:rgba(255,250,240,.95);
+border:
+
+1px solid rgba(160,120,70,.5);
+
+
+
+background:
+
+rgba(255,250,240,.95);
+
+
 
 font-size:25px;
 
+
 color:#8b6b45;
+
 
 cursor:pointer;
 
+
 z-index:2;
 
+
 }
+
+
 
 
 
 .sound-wave{
 
+
 position:absolute;
+
 
 width:55px;
 
+
 height:55px;
+
 
 border-radius:50%;
 
-border:1px solid rgba(160,120,70,.4);
+
+border:
+
+1px solid rgba(160,120,70,.4);
+
+
 
 opacity:0;
 
+
 }
+
 
 
 
 .music-wrapper.playing .sound-wave{
 
+
 animation:wave 1.8s infinite;
+
 
 }
 
 
 
+
 @keyframes wave{
+
 
 from{
 
@@ -426,6 +586,7 @@ opacity:.8;
 
 }
 
+
 to{
 
 transform:scale(1.8);
@@ -434,7 +595,9 @@ opacity:0;
 
 }
 
+
 }
+
 
 
 </style>
@@ -442,21 +605,25 @@ opacity:0;
 </head>
 
 
+
 <body>
 
 
-<!-- Màn hình mở -->
+
+<!-- Opening -->
 
 <div class="opening" id="opening">
+
 
 <div class="open-content">
 
 
 <div class="small-title">
 
-THIỆP CƯỚI
+WEDDING INVITATION
 
 </div>
+
 
 
 <div class="names">
@@ -465,13 +632,19 @@ CHUN
 
 <br>
 
-<span class="amp">&</span>
+<span class="amp">
+
+&
+
+</span>
 
 <br>
 
 DAM
 
 </div>
+
+
 
 
 <div class="open-date">
@@ -481,6 +654,8 @@ DAM
 </div>
 
 
+
+
 <button class="open-btn" id="openBtn">
 
 MỞ THIỆP
@@ -488,13 +663,19 @@ MỞ THIỆP
 </button>
 
 
+
+
 </div>
 
+
 </div>
 
 
 
-<!-- Nhạc -->
+
+
+<!-- Music -->
+
 
 <audio id="music" loop>
 
@@ -504,11 +685,16 @@ MỞ THIỆP
 
 
 
-<!-- Trang chính -->
+
+
+<!-- Main -->
+
 
 <section class="main">
 
+
 <div>
+
 
 <h1>
 
@@ -525,6 +711,7 @@ DAM
 </h1>
 
 
+
 <div class="main-date">
 
 17 • 10 • 2026
@@ -534,30 +721,50 @@ DAM
 
 </div>
 
+
 </section>
 
 
 
-<!-- Hoa -->
+
+
+
+
+<!-- Petals -->
+
 
 <div class="petals">
 
+
 <div class="petal"></div>
+
 <div class="petal"></div>
+
 <div class="petal"></div>
+
 <div class="petal"></div>
+
 <div class="petal"></div>
+
 <div class="petal"></div>
+
 
 </div>
 
 
 
-<!-- Nút nhạc -->
+
+
+
+
+<!-- Music Button -->
+
 
 <div class="music-wrapper" id="musicBox">
 
+
 <div class="sound-wave"></div>
+
 
 <button id="musicBtn">
 
@@ -565,7 +772,13 @@ DAM
 
 </button>
 
+
 </div>
+
+
+
+
+
 
 
 
@@ -592,25 +805,35 @@ const musicBtn =
 document.getElementById("musicBtn");
 
 
+
 let playing=false;
+
 
 
 
 openBtn.onclick=function(){
 
+
 opening.classList.add("hide");
+
 
 music.play();
 
+
 musicBox.classList.add("show");
+
 
 musicBox.classList.add("playing");
 
+
 musicBtn.innerHTML="♫";
+
 
 playing=true;
 
+
 }
+
 
 
 
@@ -619,20 +842,29 @@ musicBtn.onclick=function(){
 
 if(playing){
 
+
 music.pause();
 
+
 musicBtn.innerHTML="🎵";
+
 
 musicBox.classList.remove("playing");
 
 
-}else{
+}
+
+else{
+
 
 music.play();
 
+
 musicBtn.innerHTML="♫";
 
+
 musicBox.classList.add("playing");
+
 
 }
 
@@ -643,9 +875,11 @@ playing=!playing;
 }
 
 
+
 </script>
 
 
 </body>
+
 
 </html>
