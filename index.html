@@ -30,15 +30,14 @@ body{
 
 
 
-/* Trang mở đầu */
+/* ===== TRANG BÌA ===== */
+
 
 .cover{
 
     height:100vh;
 
     display:flex;
-
-    flex-direction:column;
 
     justify-content:center;
 
@@ -65,8 +64,6 @@ body{
 
 
 
-/* Chữ */
-
 
 .title{
 
@@ -75,6 +72,7 @@ body{
     animation:showText 2s ease forwards;
 
 }
+
 
 
 h1{
@@ -90,6 +88,7 @@ h1{
     line-height:1.4;
 
 }
+
 
 
 .and{
@@ -111,6 +110,7 @@ h1{
 }
 
 
+
 .subtitle{
 
     margin-top:15px;
@@ -124,7 +124,6 @@ h1{
 
 
 @keyframes showText{
-
 
 from{
 
@@ -143,14 +142,13 @@ to{
 
 }
 
-
 }
 
 
 
 
 
-/* ===== CÁNH HOA RƠI ===== */
+/* ===== CÁNH HOA ===== */
 
 
 .petals{
@@ -159,9 +157,9 @@ to{
 
     inset:0;
 
-    pointer-events:none;
-
     overflow:hidden;
+
+    pointer-events:none;
 
 }
 
@@ -189,61 +187,58 @@ to{
 
 
 
-
-
 .petal:nth-child(1){
 
-    left:10%;
+left:10%;
 
-    animation-duration:12s;
+animation-duration:12s;
 
 }
 
 
 .petal:nth-child(2){
 
-    left:25%;
+left:25%;
 
-    animation-duration:16s;
+animation-duration:16s;
 
 }
 
 
 .petal:nth-child(3){
 
-    left:40%;
+left:40%;
 
-    animation-duration:13s;
+animation-duration:13s;
 
 }
 
 
 .petal:nth-child(4){
 
-    left:55%;
+left:55%;
 
-    animation-duration:18s;
+animation-duration:18s;
 
 }
 
 
 .petal:nth-child(5){
 
-    left:70%;
+left:70%;
 
-    animation-duration:15s;
+animation-duration:15s;
 
 }
 
 
 .petal:nth-child(6){
 
-    left:85%;
+left:85%;
 
-    animation-duration:20s;
+animation-duration:20s;
 
 }
-
 
 
 
@@ -251,20 +246,94 @@ to{
 @keyframes fall{
 
 
-0%{
+from{
 
-    transform:
-    translateY(-50px)
-    rotate(0deg);
+transform:
+translateY(-50px)
+rotate(0deg);
 
 }
 
 
-100%{
+to{
 
-    transform:
-    translateY(110vh)
-    rotate(360deg);
+transform:
+translateY(110vh)
+rotate(360deg);
+
+}
+
+
+}
+
+
+
+
+
+
+/* ===== NÚT NHẠC ===== */
+
+
+#musicBtn{
+
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+
+width:50px;
+
+height:50px;
+
+
+border-radius:50%;
+
+
+border:none;
+
+
+background:white;
+
+
+font-size:22px;
+
+
+cursor:pointer;
+
+
+box-shadow:
+0 5px 15px rgba(0,0,0,0.15);
+
+
+z-index:20;
+
+
+}
+
+
+
+
+
+/* ===== MOBILE ===== */
+
+
+@media(max-width:600px){
+
+
+h1{
+
+font-size:40px;
+
+}
+
+
+
+.date{
+
+font-size:18px;
 
 }
 
@@ -275,7 +344,6 @@ to{
 
 </style>
 
-
 </head>
 
 
@@ -283,6 +351,31 @@ to{
 <body>
 
 
+
+<!-- Nhạc nền -->
+
+<audio id="music" loop>
+
+<source src="music/wedding.mp3" type="audio/mpeg">
+
+</audio>
+
+
+
+
+<!-- Nút nhạc -->
+
+<button id="musicBtn">
+
+🎵
+
+</button>
+
+
+
+
+
+<!-- Cánh hoa -->
 
 <div class="petals">
 
@@ -303,10 +396,14 @@ to{
 
 
 
+
+<!-- Nội dung -->
+
 <section class="cover">
 
 
 <div class="title">
+
 
 <h1>
 
@@ -319,6 +416,7 @@ CÔ DÂU
 <br>
 
 CHÚ RỂ
+
 
 </h1>
 
@@ -342,12 +440,64 @@ SAVE THE DATE
 </div>
 
 
-
 </section>
 
 
 
-</body>
 
+
+
+<script>
+
+
+const music =
+document.getElementById("music");
+
+
+const btn =
+document.getElementById("musicBtn");
+
+
+
+let playing=false;
+
+
+
+btn.onclick=function(){
+
+
+if(playing){
+
+
+music.pause();
+
+btn.innerHTML="🎵";
+
+
+}
+
+else{
+
+
+music.play();
+
+btn.innerHTML="⏸";
+
+
+}
+
+
+playing=!playing;
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
 
 </html>
