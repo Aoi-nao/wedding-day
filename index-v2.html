@@ -8,53 +8,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>CHUN & DAM | Wedding Invitation</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
 <body>
 
-<!-- ==========================================
-                HERO
-=========================================== -->
+    <!--==================================================
+                    HERO
+    ===================================================-->
 
-<header class="hero">
+    <header class="hero">
 
-    <div class="hero__overlay"></div>
+        <div class="hero__content">
 
-    <div class="hero__content">
+            <p class="hero__subtitle" id="invitationTitle">
+                WEDDING INVITATION
+            </p>
 
-        <p class="hero__subtitle">
-            WEDDING INVITATION
-        </p>
+            <h1 class="hero__title">
 
-        <h1 class="hero__title">
-            CHUN <span>✦</span> DAM
-        </h1>
+                <span id="brideName">CHUN</span>
 
-        <p class="hero__date">
-            17 • 10 • 2026
-        </p>
+                <span class="hero__star">✦</span>
 
-        <button class="hero__button">
-            MỞ THIỆP
-        </button>
-        <div class="hero__scroll">
+                <span id="groomName">DAM</span>
 
-    ⌄
+            </h1>
 
-</div>
-    </div>
+            <p class="hero__date" id="weddingDate">
+                17 • 10 • 2026
+            </p>
 
-</header>
+            <button
+                id="openBtn"
+                class="hero__button">
 
+                MỞ THIỆP
+
+            </button>
+
+            <div class="hero__scroll">
+
+                ⌄
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!--==================================================
+            Couple Section
+            (Sprint 2)
+    ===================================================-->
+
+    <section id="couple"></section>
+
+    <!--==================================================
+                    MUSIC
+    ===================================================-->
+
+    <audio
+        id="bgMusic"
+        loop>
+
+        <source src="music/wedding.mp3" type="audio/mpeg">
+
+    </audio>
+
+    <!-- JS -->
 
     <script src="js/config.js"></script>
+
     <script src="js/script.js"></script>
 
 </body>
