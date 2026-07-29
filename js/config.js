@@ -1,32 +1,84 @@
-/*======================================
-
-CHUN & DAM
-Wedding Website
-
-Configuration File
-
-======================================*/
+/*==================================================
+    CHUN & DAM
+    Wedding Website
+    Configuration
+==================================================*/
 
 const WEDDING = {
 
-    bride: "CHUN",
+    /*==============================
+        Couple
+    ==============================*/
+    couple: {
 
-    groom: "DAM",
+        bride: {
+            name: "CHUN",
+            image: "images/bride.jpg"
+        },
 
-    weddingDate: "17 • 10 • 2026",
+        groom: {
+            name: "DAM",
+            image: "images/groom.jpg"
+        }
 
-    invitationTitle: "WEDDING INVITATION",
+    },
 
-    buttonText: "MỞ THIỆP",
+    /*==============================
+        Hero
+    ==============================*/
+    hero: {
 
-    quote: "Together is a beautiful place to be",
+        title: "WEDDING INVITATION",
 
-    music: "music/wedding.mp3",
+        date: "17 • 10 • 2026",
 
-    heroImage: "",
+        buttonText: "MỞ THIỆP",
 
-    brideImage: "images/bride.jpg",
+        quote: "Together is a beautiful place to be"
 
-    groomImage: "images/groom.jpg"
+    },
+
+    /*==============================
+        Music
+    ==============================*/
+    music: {
+
+        src: "music/wedding.mp3",
+
+        autoplay: false,
+
+        loop: true
+
+    },
+
+    /*==============================
+        Timeline
+        (Release 2.2)
+    ==============================*/
+    timeline: [
+
+    ],
+
+    /*==============================
+        Location
+        (Release 2.3)
+    ==============================*/
+    location: {
+
+        venue: "",
+
+        address: "",
+
+        map: ""
+
+    },
+
+    /*==============================
+        Gallery
+        (Release 2.4)
+    ==============================*/
+    gallery: [
+
+    ]
 
 };
