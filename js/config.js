@@ -15,22 +15,25 @@ opening:{
 
     showCoupleNames:true,
 
-    buttonText:"MỞ THIỆP"
+    buttonText:"MỞ THIỆP",
+
+    background:"images/cover.jpg"
 
 },
-
 
 
     /*==============================
         Hero
     ==============================*/
-    hero:{
+ hero:{
 
-        quote:"Together is a beautiful place to be",
+    quote:"Together is a beautiful place to be",
 
-        date:"17 • 10 • 2026"
+    date:"17 • 10 • 2026",
 
-    },
+    background:"images/cover.jpg"
+
+},
 
 
 
