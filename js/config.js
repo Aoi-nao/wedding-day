@@ -17,7 +17,7 @@ opening:{
 
     buttonText:"MỞ THIỆP"
 
-}
+},
 
 
 
@@ -66,19 +66,21 @@ opening:{
     /*==============================
         Music
     ==============================*/
-    music:{
+music:{
 
-        src:"music/wedding.mp3",
+    src:"music/wedding.mp3",
 
-        autoplay:false,
+    autoplay:false,
 
-        loop:true,
+    loop:true,
 
-        iconPlay:"♫",
+    iconPlay:"♫",
 
-        iconPause:"♪"
+    iconPause:"♪",
 
-    },
+    buttonTitle:"Music"
+
+},
 
 
 
