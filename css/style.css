@@ -1,122 +1,893 @@
-/*======================================
-
-CHUN & DAM
-Wedding Website
-
-Version : 1.1
-
-Theme : Korean Minimal
-
-======================================*/
-
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
 
 body{
 
-    font-family:"Cormorant Garamond",serif;
+margin:0;
 
-    background:#F8F5F1;
+font-family:"Times New Roman",serif;
 
-    color:#4f4037;
+color:#6b5140;
+
+overflow-x:hidden;
+
+}
+
+
+
+
+
+/* ===== OPENING ===== */
+
+
+.opening{
+
+position:fixed;
+
+inset:0;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+
+background:
+
+linear-gradient(
+rgba(250,247,242,.65),
+rgba(250,247,242,.65)
+),
+
+url("images/cover.jpg");
+
+
+background-size:cover;
+
+background-position:center;
+
+z-index:50;
+
+
+transition:opacity 1.5s ease,
+visibility 1.5s;
 
 }
 
 
-/*======================================
-                HERO
-======================================*/
 
-.hero{
 
-    position:relative;
+.opening.hide{
 
-    width:100%;
+opacity:0;
 
-    height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
+visibility:hidden;
 
 }
 
-.hero__content{
 
-    z-index:2;
 
-}
 
-.hero__subtitle{
+.open-content{
 
-    letter-spacing:5px;
-
-    font-size:18px;
-
-    margin-bottom:30px;
+animation:fadeUp 2s ease;
 
 }
 
-.hero__title{
 
-    font-size:72px;
 
-    font-weight:500;
 
-    margin-bottom:25px;
+.small-title{
 
-}
+font-size:14px;
 
-.hero__title span{
+letter-spacing:6px;
 
-    font-size:40px;
-
-    margin:0 12px;
+margin-bottom:45px;
 
 }
 
-.hero__date{
 
-    font-size:28px;
 
-    margin-bottom:50px;
 
-}
 
-.hero__button{
+.names{
 
-    padding:16px 46px;
+font-size:65px;
 
-    border:1px solid #c8b39a;
+font-weight:normal;
 
-    background:white;
+letter-spacing:12px;
 
-    border-radius:999px;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.35s;
+line-height:1.35;
 
 }
 
-.hero__button:hover{
 
-    background:#c8b39a;
 
-    color:white;
+
+
+.amp{
+
+font-size:35px;
+
+}
+
+
+
+
+.open-date{
+
+margin-top:45px;
+
+font-size:20px;
+
+letter-spacing:6px;
+
+}
+
+
+
+
+
+.open-btn{
+
+
+margin-top:55px;
+
+
+padding:14px 45px;
+
+
+border:
+
+1px solid rgba(130,100,70,.5);
+
+
+
+background:
+
+rgba(255,255,255,.45);
+
+
+
+font-size:14px;
+
+
+letter-spacing:5px;
+
+
+color:#6b5140;
+
+
+cursor:pointer;
+
+
+}
+
+
+
+
+
+.open-btn:hover{
+
+background:white;
+
+}
+
+
+
+
+
+
+/* ===== MAIN INVITATION ===== */
+
+
+.main{
+
+
+min-height:100vh;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+text-align:center;
+
+
+
+background:
+
+
+linear-gradient(
+rgba(250,247,242,.75),
+rgba(250,247,242,.75)
+),
+
+
+url("images/cover.jpg");
+
+
+
+background-size:cover;
+
+background-position:center;
+
+
+padding:50px 25px;
+
+}
+
+
+
+
+.invitation{
+
+
+max-width:600px;
+
+
+animation:fadeUp 2s ease;
+
+
+}
+
+
+
+
+
+.invite-title{
+
+
+font-size:30px;
+
+
+line-height:1.8;
+
+
+letter-spacing:3px;
+
+
+}
+
+
+
+.invitation p{
+
+
+margin-top:35px;
+
+
+font-size:18px;
+
+
+line-height:2;
+
+
+letter-spacing:2px;
+
+
+}
+
+
+
+.divider{
+
+
+margin:40px 0;
+
+
+font-size:28px;
+
+
+color:#b79b6c;
+
+
+}
+
+
+
+.family-text{
+
+
+font-size:19px;
+
+
+letter-spacing:4px;
+
+
+line-height:2;
+
+
+}
+
+
+
+
+
+
+@keyframes fadeUp{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+
+}
+  /* ===== PETALS ===== */
+
+
+.petals{
+
+position:fixed;
+
+inset:0;
+
+overflow:hidden;
+
+pointer-events:none;
+
+z-index:10;
+
+}
+
+
+
+.petal{
+
+
+position:absolute;
+
+
+top:-30px;
+
+
+width:15px;
+
+
+height:15px;
+
+
+
+background:#f2c7c9;
+
+
+border-radius:
+
+100% 0 100% 0;
+
+
+opacity:.75;
+
+
+
+animation:fall linear infinite;
+
+
+}
+
+
+
+
+.petal:nth-child(1){
+
+left:10%;
+
+animation-duration:12s;
+
+}
+
+
+.petal:nth-child(2){
+
+left:25%;
+
+animation-duration:16s;
+
+}
+
+
+.petal:nth-child(3){
+
+left:40%;
+
+animation-duration:13s;
+
+}
+
+
+.petal:nth-child(4){
+
+left:60%;
+
+animation-duration:18s;
+
+}
+
+
+.petal:nth-child(5){
+
+left:75%;
+
+animation-duration:15s;
+
+}
+
+
+.petal:nth-child(6){
+
+left:90%;
+
+animation-duration:20s;
+
+}
+
+
+
+
+
+@keyframes fall{
+
+
+from{
+
+transform:
+
+translateY(-50px)
+
+rotate(0deg);
+
+}
+
+
+to{
+
+transform:
+
+translateY(110vh)
+
+rotate(360deg);
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* ===== MUSIC BUTTON ===== */
+
+
+.music-wrapper{
+
+
+position:fixed;
+
+
+right:25px;
+
+
+bottom:25px;
+
+
+width:70px;
+
+
+height:70px;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+z-index:30;
+
+
+
+opacity:0;
+
+
+transition:1s;
+
+
+}
+
+
+
+.music-wrapper.show{
+
+
+opacity:1;
+
+
+}
+
+
+
+
+#musicBtn{
+
+
+width:55px;
+
+
+height:55px;
+
+
+border-radius:50%;
+
+
+border:
+
+1px solid rgba(160,120,70,.5);
+
+
+
+background:
+
+rgba(255,250,240,.95);
+
+
+
+font-size:25px;
+
+
+color:#8b6b45;
+
+
+cursor:pointer;
+
+
+z-index:2;
+
+
+}
+
+
+
+
+
+.sound-wave{
+
+
+position:absolute;
+
+
+width:55px;
+
+
+height:55px;
+
+
+border-radius:50%;
+
+
+border:
+
+1px solid rgba(160,120,70,.4);
+
+
+
+opacity:0;
+
+
+}
+
+
+
+
+.music-wrapper.playing .sound-wave{
+
+
+animation:wave 1.8s infinite;
+
+
+}
+
+
+
+
+@keyframes wave{
+
+
+from{
+
+transform:scale(1);
+
+opacity:.8;
+
+}
+
+
+to{
+
+transform:scale(1.8);
+
+opacity:0;
+
+}
+
+
+}
+
+
+/* ===== COUPLE SECTION ===== */
+
+
+.couple{
+
+
+min-height:100vh;
+
+
+background:#faf7f2;
+
+
+display:flex;
+
+
+justify-content:center;
+
+
+align-items:center;
+
+
+gap:70px;
+
+
+padding:100px 30px;
+
+
+text-align:center;
+
+
+}
+
+
+
+
+
+.person{
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+align-items:center;
+
+
+}
+
+
+
+
+
+.role{
+
+
+font-size:12px;
+
+
+letter-spacing:6px;
+
+
+color:#8b7560;
+
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.photo-frame{
+
+
+width:240px;
+
+
+height:300px;
+
+
+border-radius:50%;
+
+
+padding:8px;
+
+
+background:white;
+
+
+box-shadow:
+
+
+0 20px 45px rgba(100,80,50,.12);
+
+
+
+}
+
+
+
+
+
+.photo-placeholder{
+
+
+width:100%;
+
+
+height:100%;
+
+
+border-radius:50%;
+
+
+background:
+
+
+linear-gradient(
+
+135deg,
+
+#f5eee4,
+
+#e9dccb
+
+);
+
+
+
+position:relative;
+
+
+overflow:hidden;
+
+
+}
+
+
+
+
+
+.photo-placeholder::after{
+
+
+content:"♡";
+
+
+position:absolute;
+
+
+top:50%;
+
+
+left:50%;
+
+
+transform:
+
+translate(-50%,-50%);
+
+
+font-size:42px;
+
+
+color:#c6a878;
+
+
+}
+
+
+
+
+
+.person-name{
+
+
+margin-top:30px;
+
+
+font-size:38px;
+
+
+font-weight:normal;
+
+
+letter-spacing:10px;
+
+
+}
+
+
+
+
+
+.symbol{
+
+
+font-size:35px;
+
+
+color:#b79b6c;
+
+
+}
+
+
+
+
+
+@media(max-width:700px)
+
+
+.couple{
+
+
+flex-direction:column;
+
+
+gap:35px;
+
+
+}
+
+
+
+.photo-frame{
+
+
+width:220px;
+
+
+height:280px;
+
+
+}
+
+
+
+}
+
 
 }
