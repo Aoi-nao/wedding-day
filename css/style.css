@@ -854,40 +854,27 @@ color:#b79b6c;
 
 }
 
+@media (max-width:700px){
 
+    .couple{
 
+        flex-direction:column;
 
+        gap:35px;
 
-@media(max-width:700px)
+    }
 
+    .photo-frame{
 
-.couple{
+        width:220px;
 
+        height:280px;
 
-flex-direction:column;
-
-
-gap:35px;
-
-
-}
-
-
-
-.photo-frame{
-
-
-width:220px;
-
-
-height:280px;
-
+    }
 
 }
 
 
-
-}
 
 
 }
