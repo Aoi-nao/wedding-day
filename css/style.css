@@ -1,1 +1,895 @@
+/*==================================================
+    Wedding Website
+    Style Sheet
+==================================================*/
 
+
+
+/*==================================================
+    RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:
+    "Cormorant Garamond",
+    "Times New Roman",
+    serif;
+
+    background:#F8F5F1;
+
+    color:#5B4A42;
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+
+
+/*==================================================
+    COMMON
+==================================================*/
+
+img{
+
+    display:block;
+
+    width:100%;
+
+}
+
+button{
+
+    font:inherit;
+
+    cursor:pointer;
+
+    border:none;
+
+    background:none;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+main{
+
+    position:relative;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:15px;
+
+    letter-spacing:6px;
+
+    text-transform:uppercase;
+
+    color:#A08973;
+
+    margin-bottom:60px;
+
+}
+
+
+
+/*==================================================
+    OPENING
+==================================================*/
+
+.opening{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    z-index:999;
+
+    overflow:hidden;
+
+    transition:
+    opacity .8s ease,
+    visibility .8s ease;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.opening.hide{
+
+    opacity:0;
+
+    visibility:hidden;
+
+}
+
+.opening__overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(248,245,241,.70);
+
+    backdrop-filter:blur(2px);
+
+}
+
+.opening__content{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(90%,700px);
+
+    padding:40px;
+
+}
+
+.opening__title{
+
+    font-size:15px;
+
+    letter-spacing:7px;
+
+    color:#A08973;
+
+    margin-bottom:48px;
+
+}
+
+.opening__names{
+
+    font-size:68px;
+
+    font-weight:400;
+
+    line-height:1.35;
+
+    letter-spacing:10px;
+
+}
+
+.opening__date{
+
+    margin-top:42px;
+
+    font-size:22px;
+
+    letter-spacing:5px;
+
+}
+
+.opening__button{
+
+    margin-top:58px;
+
+    padding:15px 48px;
+
+    border:1px solid #D4C3B0;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.72);
+
+    color:#5B4A42;
+
+    letter-spacing:4px;
+
+    transition:.35s;
+
+}
+
+.opening__button:hover{
+
+    transform:translateY(-2px);
+
+    background:white;
+
+}
+
+
+
+/*==================================================
+    HERO
+==================================================*/
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 30px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.hero__content{
+
+    max-width:760px;
+
+}
+
+.hero__quote{
+
+    font-size:24px;
+
+    font-style:italic;
+
+    color:#8B7765;
+
+    margin-bottom:48px;
+
+}
+
+.hero__names{
+
+    font-size:68px;
+
+    font-weight:400;
+
+    letter-spacing:10px;
+
+    margin-bottom:28px;
+
+}
+
+.hero__date{
+
+    font-size:26px;
+
+    letter-spacing:6px;
+
+}
+/*==================================================
+    COUPLE
+==================================================*/
+
+.couple{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:90px;
+
+    padding:120px 40px;
+
+    background:#F8F5F1;
+
+}
+
+.person{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    flex:0 1 320px;
+
+}
+
+.person__role{
+
+    font-size:14px;
+
+    letter-spacing:5px;
+
+    color:#A08973;
+
+    margin-bottom:28px;
+
+}
+
+.person__frame{
+
+    width:280px;
+
+    height:360px;
+
+    padding:8px;
+
+    background:#FFFFFF;
+
+    border-radius:
+
+    180px 180px 24px 24px;
+
+    box-shadow:
+
+    0 18px 45px
+
+    rgba(0,0,0,.08);
+
+}
+
+.person__image{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    border-radius:
+
+    172px 172px 18px 18px;
+
+}
+
+.person:first-child .person__image{
+
+    object-position:right center;
+
+}
+
+.person:last-child .person__image{
+
+    object-position:left center;
+
+}
+
+.person__name{
+
+    margin-top:30px;
+
+    font-size:42px;
+
+    font-weight:400;
+
+    letter-spacing:8px;
+
+}
+
+.couple__heart{
+
+    font-size:34px;
+
+    color:#C8A98A;
+
+    transform:translateY(-20px);
+
+}
+
+
+
+/*==================================================
+    PETALS
+==================================================*/
+
+.petals{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:20;
+
+}
+
+.petal{
+
+    position:absolute;
+
+    top:-40px;
+
+    width:16px;
+
+    height:16px;
+
+    background:#F3CCD2;
+
+    border-radius:
+
+    100% 0 100% 0;
+
+    opacity:.75;
+
+    animation:petalFall linear infinite;
+
+}
+
+.petal:nth-child(1){
+
+    left:8%;
+
+    animation-duration:14s;
+
+}
+
+.petal:nth-child(2){
+
+    left:24%;
+
+    animation-duration:18s;
+
+}
+
+.petal:nth-child(3){
+
+    left:40%;
+
+    animation-duration:16s;
+
+}
+
+.petal:nth-child(4){
+
+    left:58%;
+
+    animation-duration:20s;
+
+}
+
+.petal:nth-child(5){
+
+    left:76%;
+
+    animation-duration:17s;
+
+}
+
+.petal:nth-child(6){
+
+    left:92%;
+
+    animation-duration:22s;
+
+}
+
+@keyframes petalFall{
+
+    from{
+
+        transform:
+
+        translateY(-50px)
+
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(110vh)
+
+        rotate(360deg);
+
+    }
+
+}
+
+
+
+/*==================================================
+    MUSIC
+==================================================*/
+
+.music-wrapper{
+
+    position:fixed;
+
+    right:24px;
+
+    bottom:24px;
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:900;
+
+}
+
+.music-wrapper.show{
+
+    opacity:1;
+
+}
+
+.music-button{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    background:#FFFFFF;
+
+    border:1px solid #D4C3B0;
+
+    color:#8E7968;
+
+    font-size:22px;
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.sound-wave{
+
+    position:absolute;
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(212,195,176,.8);
+
+    opacity:0;
+
+}
+
+.music-wrapper.playing .sound-wave{
+
+    animation:wave 1.8s infinite;
+
+}
+
+@keyframes wave{
+
+    from{
+
+        transform:scale(1);
+
+        opacity:.8;
+
+    }
+
+    to{
+
+        transform:scale(1.9);
+
+        opacity:0;
+
+    }
+
+}
+/*==================================================
+    TIMELINE
+==================================================*/
+
+.timeline{
+
+    padding:120px 30px;
+
+    background:#FCFAF7;
+
+}
+
+.timeline__list{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+
+
+/*==================================================
+    LOCATION
+==================================================*/
+
+.location{
+
+    padding:120px 30px;
+
+    background:#F8F5F1;
+
+    text-align:center;
+
+}
+
+.location__content{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+}
+
+.location__venue{
+
+    font-size:34px;
+
+    font-weight:400;
+
+    margin-bottom:20px;
+
+}
+
+.location__address{
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#7E6A5B;
+
+    margin-bottom:40px;
+
+}
+
+
+
+/*==================================================
+    GALLERY
+==================================================*/
+
+.gallery{
+
+    padding:120px 30px;
+
+    background:#FCFAF7;
+
+}
+
+.gallery__grid{
+
+    max-width:1100px;
+
+    margin:0 auto;
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:24px;
+
+}
+
+.gallery__grid img{
+
+    width:100%;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.08);
+
+}
+
+
+
+/*==================================================
+    RSVP
+==================================================*/
+
+.rsvp{
+
+    padding:120px 30px 150px;
+
+    background:#F8F5F1;
+
+    text-align:center;
+
+}
+
+.button{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:220px;
+
+    padding:16px 42px;
+
+    border:1px solid #D4C3B0;
+
+    border-radius:999px;
+
+    background:#FFFFFF;
+
+    transition:.35s;
+
+}
+
+.button:hover{
+
+    transform:translateY(-2px);
+
+    background:#F4EFE8;
+
+}
+
+
+
+/*==================================================
+    RESPONSIVE
+==================================================*/
+
+@media (max-width:900px){
+
+    .opening__names{
+
+        font-size:54px;
+
+        letter-spacing:6px;
+
+    }
+
+    .hero__names{
+
+        font-size:52px;
+
+        letter-spacing:6px;
+
+    }
+
+    .couple{
+
+        flex-direction:column;
+
+        gap:48px;
+
+    }
+
+    .couple__heart{
+
+        transform:none;
+
+    }
+
+}
+
+@media (max-width:600px){
+
+    .opening__title{
+
+        letter-spacing:4px;
+
+        font-size:13px;
+
+    }
+
+    .opening__names{
+
+        font-size:42px;
+
+        letter-spacing:4px;
+
+    }
+
+    .opening__date{
+
+        font-size:18px;
+
+    }
+
+    .hero{
+
+        padding:90px 24px;
+
+    }
+
+    .hero__quote{
+
+        font-size:20px;
+
+    }
+
+    .hero__names{
+
+        font-size:40px;
+
+    }
+
+    .hero__date{
+
+        font-size:20px;
+
+    }
+
+    .person__frame{
+
+        width:230px;
+
+        height:300px;
+
+    }
+
+    .person__name{
+
+        font-size:34px;
+
+        letter-spacing:5px;
+
+    }
+
+    .location__venue{
+
+        font-size:28px;
+
+    }
+
+}
