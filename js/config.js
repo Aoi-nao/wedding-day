@@ -9,13 +9,15 @@ const WEDDING = {
     /*==============================
         Opening Screen
     ==============================*/
-    opening:{
+opening:{
 
-        title:"WEDDING INVITATION",
+    title:"WEDDING INVITATION",
 
-        buttonText:"MỞ THIỆP"
+    showCoupleNames:true,
 
-    },
+    buttonText:"MỞ THIỆP"
+
+}
 
 
 
