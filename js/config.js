@@ -7,78 +7,147 @@
 const WEDDING = {
 
     /*==============================
-        Couple
+        Opening Screen
     ==============================*/
-    couple: {
+    opening:{
 
-        bride: {
-            name: "CHUN",
-            image: "images/bride.jpg"
-        },
+        title:"WEDDING INVITATION",
 
-        groom: {
-            name: "DAM",
-            image: "images/groom.jpg"
-        }
+        buttonText:"MỞ THIỆP"
 
     },
+
+
 
     /*==============================
         Hero
     ==============================*/
-    hero: {
+    hero:{
 
-        title: "WEDDING INVITATION",
+        quote:"Together is a beautiful place to be",
 
-        date: "17 • 10 • 2026",
-
-        buttonText: "MỞ THIỆP",
-
-        quote: "Together is a beautiful place to be"
+        date:"17 • 10 • 2026"
 
     },
+
+
+
+    /*==============================
+        Couple
+    ==============================*/
+    couple:{
+
+        bride:{
+
+            role:"CÔ DÂU",
+
+            name:"CHUN",
+
+            image:"images/bride.jpg"
+
+        },
+
+        groom:{
+
+            role:"CHÚ RỂ",
+
+            name:"DAM",
+
+            image:"images/groom.jpg"
+
+        }
+
+    },
+
+
 
     /*==============================
         Music
     ==============================*/
-    music: {
+    music:{
 
-        src: "music/wedding.mp3",
+        src:"music/wedding.mp3",
 
-        autoplay: false,
+        autoplay:false,
 
-        loop: true
+        loop:true,
+
+        iconPlay:"♫",
+
+        iconPause:"♪"
 
     },
 
+
+
     /*==============================
-        Timeline
-        (Release 2.2)
+        Countdown
     ==============================*/
-    timeline: [
+    countdown:{
+
+        target:"2026-10-17T11:00:00"
+
+    },
+
+
+
+    /*==============================
+        Ceremony Timeline
+    ==============================*/
+    timeline:[
+
+        /*
+        {
+            time:"11:30",
+            title:"Tiệc cưới",
+            description:"..."
+        }
+        */
 
     ],
 
-    /*==============================
-        Location
-        (Release 2.3)
-    ==============================*/
-    location: {
 
-        venue: "",
-
-        address: "",
-
-        map: ""
-
-    },
 
     /*==============================
         Gallery
-        (Release 2.4)
     ==============================*/
-    gallery: [
+    gallery:[
 
-    ]
+        /*
+        "images/gallery/01.jpg",
+        "images/gallery/02.jpg"
+        */
+
+    ],
+
+
+
+    /*==============================
+        Location
+    ==============================*/
+    location:{
+
+        venue:"",
+
+        address:"",
+
+        map:""
+
+    },
+
+
+
+    /*==============================
+        RSVP
+    ==============================*/
+    rsvp:{
+
+        enabled:false,
+
+        url:""
+
+    }
+
+
 
 };
