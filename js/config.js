@@ -34,7 +34,22 @@ opening:{
     background:"images/cover.jpg"
 
 },
+/*==============================
+    Invitation
+==============================*/
+invitation:{
 
+    heading:`Một ngày đặc biệt,
+một khoảnh khắc đáng nhớ`,
+
+    message:`Chúng tôi rất hạnh phúc
+khi được chia sẻ niềm vui này
+cùng bạn`,
+
+    family:`Gia đình hai bên
+trân trọng kính mời`
+
+},
 
 
     /*==============================
