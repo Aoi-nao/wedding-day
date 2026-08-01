@@ -716,3 +716,363 @@ section{
     }
 
 }
+
+
+
+/*==================================================
+    COUNTDOWN
+==================================================*/
+
+.countdown{
+
+    background:var(--cream);
+
+}
+
+.countdown-wrapper{
+
+    margin-top:2.8rem;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:1rem;
+
+}
+
+.countdown-item{
+
+    padding:1.6rem .5rem;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+}
+
+.count-value{
+
+    display:block;
+
+    font-family:var(--font-title);
+
+    font-size:clamp(2.2rem,8vw,3rem);
+
+    color:var(--sage);
+
+    line-height:1;
+
+}
+
+.count-label{
+
+    display:block;
+
+    margin-top:.8rem;
+
+    font-size:.9rem;
+
+    color:var(--text-light);
+
+    letter-spacing:.08em;
+
+}
+
+
+
+/*==================================================
+    TIMELINE
+==================================================*/
+
+.timeline{
+
+    background:#fff;
+
+}
+
+.timeline-container{
+
+    margin-top:3rem;
+
+    display:grid;
+
+    gap:2rem;
+
+}
+
+.timeline-card{
+
+    position:relative;
+
+    padding:2rem;
+
+    border-radius:28px;
+
+    background:var(--cream);
+
+    box-shadow:var(--shadow);
+
+}
+
+.timeline-side{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.8rem;
+
+    margin-bottom:1.5rem;
+
+}
+
+.timeline-icon{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--sage);
+
+    color:#fff;
+
+}
+
+.timeline-side h3{
+
+    font-family:var(--font-title);
+
+    font-size:1.9rem;
+
+    color:var(--sage);
+
+}
+
+.timeline-event{
+
+    position:relative;
+
+    margin-left:1rem;
+
+    padding-left:2rem;
+
+    padding-bottom:2rem;
+
+    border-left:1px solid var(--champagne);
+
+}
+
+.timeline-event:last-child{
+
+    padding-bottom:0;
+
+    border:none;
+
+}
+
+.timeline-dot{
+
+    position:absolute;
+
+    left:-8px;
+
+    top:2px;
+
+    width:15px;
+
+    height:15px;
+
+    border-radius:50%;
+
+    background:var(--sage);
+
+}
+
+.timeline-event-title{
+
+    font-weight:600;
+
+    color:var(--text);
+
+}
+
+.timeline-event-time{
+
+    margin-top:.6rem;
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+
+
+/*==================================================
+    LOCATION
+==================================================*/
+
+.location{
+
+    background:var(--cream);
+
+}
+
+.location-wrapper{
+
+    margin-top:3rem;
+
+    display:grid;
+
+    gap:2rem;
+
+}
+
+.location-card{
+
+    padding:2rem;
+
+    background:#fff;
+
+    border-radius:26px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.location-header{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.8rem;
+
+    margin-bottom:1rem;
+
+}
+
+.location-header-icon{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--sage);
+
+    color:#fff;
+
+}
+
+.location-header h3{
+
+    font-family:var(--font-title);
+
+    font-size:1.8rem;
+
+    color:var(--sage);
+
+}
+
+.location-venue{
+
+    font-weight:600;
+
+    margin-bottom:.8rem;
+
+}
+
+.location-address{
+
+    color:var(--text-light);
+
+    line-height:1.8;
+
+}
+
+.location-map{
+
+    margin-top:1.5rem;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+}
+
+.location-button{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-top:1.5rem;
+
+    padding:.9rem 1.6rem;
+
+    border-radius:999px;
+
+    background:var(--sage);
+
+    color:#fff;
+
+    transition:.3s;
+
+}
+
+.location-button:hover{
+
+    background:#70856A;
+
+}
+
+
+
+/*==================================================
+    MOBILE
+==================================================*/
+
+@media(max-width:768px){
+
+    .countdown-wrapper{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .timeline-card{
+
+        padding:1.6rem;
+
+    }
+
+    .location-card{
+
+        padding:1.6rem;
+
+    }
+
+}
