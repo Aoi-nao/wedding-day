@@ -1,124 +1,119 @@
-/*==================================================
-    Wedding Website
-    Script
-==================================================*/
-
 "use strict";
 
 /*==================================================
     ELEMENTS
 ==================================================*/
 
-const opening = document.getElementById("opening");
-const openingTitle = document.getElementById("openingTitle");
-const openingNames = document.getElementById("openingNames");
-const openingDate = document.getElementById("openingDate");
-const openingButton = document.getElementById("openingButton");
+const opening=document.getElementById("opening");
 
-const hero = document.querySelector(".hero");
-const heroQuote = document.getElementById("heroQuote");
-const heroNames = document.getElementById("heroNames");
-const heroDate = document.getElementById("heroDate");
+const openingTitle=document.getElementById("openingTitle");
+const openingNames=document.getElementById("openingNames");
+const openingDate=document.getElementById("openingDate");
+const openingButton=document.getElementById("openingButton");
 
-const leftRole = document.getElementById("leftRole");
-const leftName = document.getElementById("leftName");
-const leftImage = document.getElementById("leftImage");
+const inviteHeading=document.getElementById("inviteHeading");
+const inviteMessage=document.getElementById("inviteMessage");
+const inviteFamily=document.getElementById("inviteFamily");
 
-const rightRole = document.getElementById("rightRole");
-const rightName = document.getElementById("rightName");
-const rightImage = document.getElementById("rightImage");
+const leftRole=document.getElementById("leftRole");
+const leftName=document.getElementById("leftName");
+const leftImage=document.getElementById("leftImage");
 
-const music = document.getElementById("bgMusic");
-const musicWrapper = document.getElementById("musicWrapper");
-const musicButton = document.getElementById("musicButton");
+const rightRole=document.getElementById("rightRole");
+const rightName=document.getElementById("rightName");
+const rightImage=document.getElementById("rightImage");
+
+const music=document.getElementById("bgMusic");
+const musicWrapper=document.getElementById("musicWrapper");
+const musicButton=document.getElementById("musicButton");
+
+
 
 /*==================================================
     OPENING
 ==================================================*/
 
-openingTitle.textContent =
+openingTitle.textContent=
 WEDDING.opening.title;
 
-openingButton.textContent =
-WEDDING.opening.buttonText;
-
-openingDate.textContent =
+openingDate.textContent=
 WEDDING.hero.date;
+
+openingButton.textContent=
+WEDDING.opening.buttonText;
 
 if(WEDDING.opening.showCoupleNames){
 
-    openingNames.innerHTML =
+    openingNames.innerHTML=
 
-        WEDDING.couple.bride.name +
+        WEDDING.couple.bride.name+
 
-        "<br>&<br>" +
+        "<br>&<br>"+
 
         WEDDING.couple.groom.name;
 
 }else{
 
-    openingNames.innerHTML = "";
+    openingNames.innerHTML="";
 
 }
 
-/*==================================================
-    HERO
-==================================================*/
 
-heroQuote.textContent =
-WEDDING.hero.quote;
-
-heroNames.textContent =
-
-WEDDING.couple.bride.name +
-
-" & " +
-
-WEDDING.couple.groom.name;
-
-heroDate.textContent =
-WEDDING.hero.date;
 
 /*==================================================
-    BACKGROUND
+    INVITATION
 ==================================================*/
 
-opening.style.backgroundImage =
+inviteHeading.innerHTML=
 
-`linear-gradient(rgba(248,245,241,.70),rgba(248,245,241,.70)),url("${WEDDING.opening.background}")`;
+WEDDING.invitation.heading.replace(/\n/g,"<br>");
 
-hero.style.backgroundImage =
+inviteMessage.innerHTML=
 
-`linear-gradient(rgba(248,245,241,.82),rgba(248,245,241,.82)),url("${WEDDING.hero.background}")`;
+WEDDING.invitation.message.replace(/\n/g,"<br>");
+
+inviteFamily.innerHTML=
+
+WEDDING.invitation.family.replace(/\n/g,"<br>");
+
+
+
 /*==================================================
     COUPLE
 ==================================================*/
 
-leftRole.textContent =
+leftRole.textContent=
 WEDDING.couple.bride.role;
 
-leftName.textContent =
+leftName.textContent=
 WEDDING.couple.bride.name;
 
-leftImage.src =
+leftImage.src=
 WEDDING.couple.bride.image;
 
-leftImage.alt =
+leftImage.alt=
 WEDDING.couple.bride.name;
 
 
 
-rightRole.textContent =
+rightRole.textContent=
 WEDDING.couple.groom.role;
 
-rightName.textContent =
+rightName.textContent=
 WEDDING.couple.groom.name;
 
-rightImage.src =
+rightImage.src=
 WEDDING.couple.groom.image;
 
-rightImage.alt =
+rightImage.alt=
 WEDDING.couple.groom.name;
+/*==================================================
+    BACKGROUND
+==================================================*/
+
+opening.style.backgroundImage=
+
+`linear-gradient(rgba(248,245,241,.72),rgba(248,245,241,.72)),url("${WEDDING.opening.background}")`;
 
 
 
@@ -126,54 +121,46 @@ WEDDING.couple.groom.name;
     MUSIC
 ==================================================*/
 
-music.src =
+music.src=
 WEDDING.music.src;
 
-music.loop =
+music.loop=
 WEDDING.music.loop;
 
-musicButton.textContent =
+musicButton.textContent=
 WEDDING.music.iconPlay;
 
-
-
-let playing = false;
-
-
+let isPlaying=false;
 
 function playMusic(){
 
-    music.play();
+    music.play().catch(()=>{});
 
-    playing = true;
+    isPlaying=true;
 
-    musicButton.textContent =
+    musicButton.textContent=
     WEDDING.music.iconPause;
 
     musicWrapper.classList.add("playing");
 
 }
 
-
-
 function pauseMusic(){
 
     music.pause();
 
-    playing = false;
+    isPlaying=false;
 
-    musicButton.textContent =
+    musicButton.textContent=
     WEDDING.music.iconPlay;
 
     musicWrapper.classList.remove("playing");
 
 }
 
-
-
 musicButton.addEventListener("click",()=>{
 
-    if(playing){
+    if(isPlaying){
 
         pauseMusic();
 
@@ -197,34 +184,46 @@ openingButton.addEventListener("click",()=>{
 
     musicWrapper.classList.add("show");
 
-    if(WEDDING.music.autoplay){
-
-        playMusic();
-
-    }
+    playMusic();
 
 });
+
+
+
+/*==================================================
+    SECTION TITLES
+==================================================*/
+
+document.getElementById("timelineTitle").textContent=
+"LỊCH TRÌNH";
+
+document.getElementById("locationTitle").textContent=
+"ĐỊA ĐIỂM";
+
+document.getElementById("galleryTitle").textContent=
+"KHOẢNH KHẮC";
+
+document.getElementById("rsvpTitle").textContent=
+"XÁC NHẬN THAM DỰ";
 /*==================================================
     TIMELINE
 ==================================================*/
 
-const timelineList =
-document.getElementById("timelineList");
+const timelineList=document.getElementById("timelineList");
 
 if(
     timelineList &&
-    Array.isArray(WEDDING.timeline)
+    Array.isArray(WEDDING.timeline) &&
+    WEDDING.timeline.length
 ){
 
     WEDDING.timeline.forEach(item=>{
 
-        const card =
-        document.createElement("div");
+        const card=document.createElement("div");
 
-        card.className =
-        "timeline-item";
+        card.className="timeline-item";
 
-        card.innerHTML = `
+        card.innerHTML=`
 
             <h3>${item.time}</h3>
 
@@ -238,36 +237,9 @@ if(
 
     });
 
-}
+}else{
 
-
-
-/*==================================================
-    GALLERY
-==================================================*/
-
-const galleryGrid =
-document.getElementById("galleryGrid");
-
-if(
-    galleryGrid &&
-    Array.isArray(WEDDING.gallery)
-){
-
-    WEDDING.gallery.forEach(src=>{
-
-        const img =
-        document.createElement("img");
-
-        img.src = src;
-
-        img.alt = "";
-
-        img.loading = "lazy";
-
-        galleryGrid.appendChild(img);
-
-    });
+    document.getElementById("timeline").style.display="none";
 
 }
 
@@ -277,31 +249,64 @@ if(
     LOCATION
 ==================================================*/
 
-if(WEDDING.location){
+if(
+    WEDDING.location &&
+    WEDDING.location.venue
+){
 
-    document.getElementById("locationVenue").textContent =
-    WEDDING.location.venue || "";
+    document.getElementById("locationVenue").textContent=
+    WEDDING.location.venue;
 
-    document.getElementById("locationAddress").textContent =
-    WEDDING.location.address || "";
-
-    const map =
-    document.getElementById("locationMap");
+    document.getElementById("locationAddress").textContent=
+    WEDDING.location.address;
 
     if(WEDDING.location.map){
 
-        map.href =
-        WEDDING.location.map;
+        const map=document.getElementById("locationMap");
 
-        map.textContent =
-        "XEM BẢN ĐỒ";
+        map.href=WEDDING.location.map;
 
-    }else{
-
-        map.style.display =
-        "none";
+        map.textContent="XEM BẢN ĐỒ";
 
     }
+
+}else{
+
+    document.getElementById("location").style.display="none";
+
+}
+
+
+
+/*==================================================
+    GALLERY
+==================================================*/
+
+const galleryGrid=document.getElementById("galleryGrid");
+
+if(
+    galleryGrid &&
+    Array.isArray(WEDDING.gallery) &&
+    WEDDING.gallery.length
+){
+
+    WEDDING.gallery.forEach(src=>{
+
+        const img=document.createElement("img");
+
+        img.src=src;
+
+        img.loading="lazy";
+
+        img.alt="";
+
+        galleryGrid.appendChild(img);
+
+    });
+
+}else{
+
+    document.getElementById("gallery").style.display="none";
 
 }
 
@@ -311,71 +316,27 @@ if(WEDDING.location){
     RSVP
 ==================================================*/
 
-const rsvp =
-document.getElementById("rsvp");
+if(
+    WEDDING.rsvp &&
+    WEDDING.rsvp.enabled
+){
 
-const rsvpButton =
-document.getElementById("rsvpButton");
+    const btn=document.getElementById("rsvpButton");
 
-if(WEDDING.rsvp.enabled){
+    btn.href=WEDDING.rsvp.url;
 
-    rsvpButton.href =
-    WEDDING.rsvp.url;
-
-    rsvpButton.textContent =
-    "XÁC NHẬN THAM DỰ";
+    btn.textContent="XÁC NHẬN THAM DỰ";
 
 }else{
 
-    rsvp.style.display =
-    "none";
+    document.getElementById("rsvp").style.display="none";
 
 }
 
 
 
 /*==================================================
-    DEFAULT SECTION TITLES
+    READY
 ==================================================*/
 
-const timelineTitle =
-document.getElementById("timelineTitle");
-
-if(timelineTitle){
-
-    timelineTitle.textContent =
-    "LỊCH TRÌNH";
-
-}
-
-const locationTitle =
-document.getElementById("locationTitle");
-
-if(locationTitle){
-
-    locationTitle.textContent =
-    "ĐỊA ĐIỂM";
-
-}
-
-const galleryTitle =
-document.getElementById("galleryTitle");
-
-if(galleryTitle){
-
-    galleryTitle.textContent =
-    "THƯ VIỆN ẢNH";
-
-}
-
-const rsvpTitle =
-document.getElementById("rsvpTitle");
-
-if(rsvpTitle){
-
-    rsvpTitle.textContent =
-    "RSVP";
-
-}
-
-console.log("Wedding website loaded.");
+console.log("Wedding Website Ready");
