@@ -15,18 +15,31 @@ const inviteHeading=document.getElementById("inviteHeading");
 const inviteMessage=document.getElementById("inviteMessage");
 const inviteFamily=document.getElementById("inviteFamily");
 
-const leftRole=document.getElementById("leftRole");
+const heroQuote=document.getElementById("heroQuote");
+const heroNames=document.getElementById("heroNames");
+const heroDate=document.getElementById("heroDate");
+
 const leftName=document.getElementById("leftName");
 const leftImage=document.getElementById("leftImage");
 
-const rightRole=document.getElementById("rightRole");
 const rightName=document.getElementById("rightName");
 const rightImage=document.getElementById("rightImage");
 
 const music=document.getElementById("bgMusic");
-const musicWrapper=document.getElementById("musicWrapper");
 const musicButton=document.getElementById("musicButton");
+const musicWrapper=document.getElementById("musicWrapper");
 
+const timelineList=document.getElementById("timelineList");
+
+const galleryGrid=document.getElementById("galleryGrid");
+
+const locationVenue=document.getElementById("locationVenue");
+const locationAddress=document.getElementById("locationAddress");
+const locationMap=document.getElementById("locationMap");
+
+const rsvpButton=document.getElementById("rsvpButton");
+
+const website=document.getElementById("website");
 
 
 /*==================================================
