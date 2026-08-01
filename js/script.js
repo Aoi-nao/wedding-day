@@ -66,6 +66,10 @@ function initWebsite(){
 
     loadLocation();
 
+    initRSVP();
+
+    initGift();
+
     console.log("Website Initialized");
 
 }
@@ -426,3 +430,167 @@ function loadLocation(){
     });
 
 }
+
+
+
+/*==================================================
+    RSVP
+==================================================*/
+
+const guestName=document.getElementById("guestName");
+
+const attendYes=document.getElementById("attendYes");
+
+const attendNo=document.getElementById("attendNo");
+
+const guestCountSection=document.getElementById("guestCountSection");
+
+const decreaseGuest=document.getElementById("decreaseGuest");
+
+const increaseGuest=document.getElementById("increaseGuest");
+
+const guestCountValue=document.getElementById("guestCountValue");
+
+const submitButton=document.getElementById("submitButton");
+
+let guestCount=1;
+
+
+
+/*==================================================
+    GIFT
+==================================================*/
+
+const giftSlider=document.getElementById("giftSlider");
+
+const giftCards=document.querySelectorAll(".gift-card");
+
+const giftIndicators=document.querySelectorAll(".gift-indicator");
+
+let currentGift=0;
+
+
+
+/*==================================================
+    RSVP
+==================================================*/
+
+function initRSVP(){
+
+    guestCountValue.textContent=guestCount;
+
+    attendYes.addEventListener("change",()=>{
+
+        guestCountSection.style.display="block";
+
+    });
+
+    attendNo.addEventListener("change",()=>{
+
+        guestCountSection.style.display="none";
+
+    });
+
+    decreaseGuest.addEventListener("click",()=>{
+
+        if(guestCount>1){
+
+            guestCount--;
+
+            guestCountValue.textContent=guestCount;
+
+        }
+
+    });
+
+    increaseGuest.addEventListener("click",()=>{
+
+        guestCount++;
+
+        guestCountValue.textContent=guestCount;
+
+    });
+
+}
+
+function submitRSVP(){
+
+    const name=guestName.value.trim();
+
+    if(name===""){
+
+        alert("Vui lòng nhập họ và tên.");
+
+        return;
+
+    }
+
+    alert(WEDDING.rsvp.successMessage);
+
+}
+
+submitButton.addEventListener("click",submitRSVP);
+
+/*==================================================
+    GIFT
+==================================================*/
+
+function initGift(){
+
+    updateGift();
+
+}
+
+function updateGift(){
+
+    giftSlider.scrollTo({
+
+        left:giftCards[currentGift].offsetLeft,
+
+        behavior:"smooth"
+
+    });
+
+    giftIndicators.forEach((dot,index)=>{
+
+        dot.classList.toggle(
+
+            "active",
+
+            index===currentGift
+
+        );
+
+    });
+
+}
+
+giftSlider.addEventListener("scroll",()=>{
+
+    let closest=0;
+
+    let minDistance=Infinity;
+
+    giftCards.forEach((card,index)=>{
+
+        const distance=Math.abs(
+
+            giftSlider.scrollLeft-card.offsetLeft
+
+        );
+
+        if(distance<minDistance){
+
+            minDistance=distance;
+
+            closest=index;
+
+        }
+
+    });
+
+    currentGift=closest;
+
+    updateGift();
+
+});
