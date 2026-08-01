@@ -297,63 +297,53 @@ main{
 
     padding:110px 30px 120px;
 
-    display:flex;
-
-    flex-wrap:wrap;
-
-    justify-content:center;
-
-    gap:80px;
+    text-align:center;
 
     position:relative;
 
 }
 
-
-
 .couple__header{
 
-    width:100%;
-
-    text-align:center;
-
-    margin-bottom:20px;
+    margin-bottom:60px;
 
 }
-
-
 
 .couple__subtitle{
 
     font-size:13px;
 
-    letter-spacing:7px;
-
-    color:#a78963;
+    letter-spacing:6px;
 
     text-transform:uppercase;
+
+    color:#aa8c67;
 
     margin-bottom:18px;
 
 }
 
+.couple__star{
 
+    font-size:18px;
 
-.couple__title{
-
-    font-family:"Cormorant Garamond",serif;
-
-    font-size:42px;
-
-    font-weight:400;
-
-    color:#4e4035;
-
-    line-height:1.4;
+    color:#c8a97e;
 
 }
 
+.couple__content{
 
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    gap:90px;
+
+    margin-bottom:55px;
+
+}
 
 .person{
 
@@ -367,54 +357,23 @@ main{
 
 }
 
-
-
-.person__role{
-
-    font-size:13px;
-
-    letter-spacing:6px;
-
-    color:#9d8764;
-
-    margin-bottom:28px;
-
-    text-transform:uppercase;
-
-}
 .person__frame{
 
-    width:280px;
+    width:300px;
 
-    height:360px;
+    height:390px;
 
-    border:2px solid #d9c2a0;
-
-    border-radius:160px 160px 20px 20px;
-
-    overflow:hidden;
+    padding:8px;
 
     background:#fff;
 
-    padding:10px;
+    border:1px solid #dcc7aa;
 
-    box-shadow:0 18px 40px rgba(0,0,0,.08);
+    border-radius:170px 170px 10px 10px;
 
-    transition:.35s ease;
-
-}
-
-
-
-.person__frame:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 24px 50px rgba(0,0,0,.12);
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
 
 }
-
-
 
 .person__image{
 
@@ -424,13 +383,11 @@ main{
 
     object-fit:cover;
 
-    border-radius:150px 150px 12px 12px;
+    border-radius:165px 165px 6px 6px;
 
     display:block;
 
 }
-
-
 
 .person__name{
 
@@ -438,19 +395,43 @@ main{
 
     font-family:"Cormorant Garamond",serif;
 
-    font-size:42px;
+    font-size:54px;
 
-    font-weight:500;
+    font-weight:400;
 
-    color:#4e4035;
+    letter-spacing:4px;
 
-    letter-spacing:2px;
+    color:#6b5037;
 
 }
 
+.couple__center{
 
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:14px;
+
+    color:#c8a97e;
+
+    font-size:18px;
+
+    margin-top:170px;
+
+}
 
 .couple__heart{
+
+    font-size:30px;
+
+}
+
+.couple__quote{
 
     display:flex;
 
@@ -458,81 +439,73 @@ main{
 
     justify-content:center;
 
-    font-size:40px;
+    gap:24px;
 
-    color:#c8a97e;
-
-    margin-top:150px;
+    margin-top:30px;
 
 }
 
+.couple__quote span{
 
+    width:120px;
 
-@media(max-width:900px){
+    height:1px;
 
-    .couple{
+    background:#dfcfba;
 
-        gap:55px;
+}
 
-        padding:90px 24px;
+.couple__quote p{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-style:italic;
+
+    font-size:30px;
+
+    color:#b08a61;
+
+    margin:0;
+
+}
+
+@media (max-width:900px){
+
+    .couple__content{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:40px;
 
     }
 
-    .couple__title{
+    .couple__center{
 
-        font-size:34px;
-
-    }
-
-    .person{
-
-        width:100%;
-
-        max-width:320px;
-
-    }
-
-    .couple__heart{
-
-        width:100%;
+        flex-direction:row;
 
         margin:0;
-
-        order:2;
-
-    }
-
-}
-
-
-
-@media(max-width:600px){
-
-    .person__frame{
-
-        width:240px;
-
-        height:315px;
-
-        border-radius:140px 140px 18px 18px;
-
-    }
-
-    .person__image{
-
-        border-radius:130px 130px 10px 10px;
 
     }
 
     .person__name{
 
-        font-size:34px;
+        font-size:42px;
 
     }
 
-    .couple__title{
+    .couple__quote{
 
-        font-size:28px;
+        flex-direction:column;
+
+        gap:16px;
+
+    }
+
+    .couple__quote span{
+
+        width:80px;
 
     }
 
