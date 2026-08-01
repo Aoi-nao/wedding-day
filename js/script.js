@@ -82,9 +82,6 @@ WEDDING.invitation.family.replace(/\n/g,"<br>");
     COUPLE
 ==================================================*/
 
-leftRole.textContent=
-WEDDING.couple.bride.role;
-
 leftName.textContent=
 WEDDING.couple.bride.name;
 
@@ -95,9 +92,6 @@ leftImage.alt=
 WEDDING.couple.bride.name;
 
 
-
-rightRole.textContent=
-WEDDING.couple.groom.role;
 
 rightName.textContent=
 WEDDING.couple.groom.name;
