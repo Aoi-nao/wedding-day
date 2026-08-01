@@ -320,7 +320,7 @@ trân trọng kính mời`,
 
 },
 
-        /*==================================================
+            /*==================================================
         RSVP
     ==================================================*/
 
@@ -332,31 +332,66 @@ trân trọng kính mời`,
 
         deadline:"01/10/2026",
 
-        options:[
+        name:{
 
-            {
+            label:"Họ và tên",
 
-                id:"attending",
+            placeholder:"Nhập họ và tên của bạn",
 
-                text:"💚 Mình sẽ tham dự"
+            required:true
 
-            },
+        },
 
-            {
+        attendance:{
 
-                id:"not-attending",
+            label:"Bạn sẽ tham dự chứ?",
 
-                text:"🤍 Xin lỗi, mình bận mất rồi"
+            options:[
 
-            }
+                {
 
-        ],
+                    id:"attending",
 
-        allowGuestCount:true,
+                    text:"💚 Mình sẽ tham dự"
 
-        maxGuest:5,
+                },
+
+                {
+
+                    id:"not-attending",
+
+                    text:"🤍 Xin lỗi, mình bận mất rồi"
+
+                }
+
+            ]
+
+        },
+
+        guestCount:{
+
+            label:"Số lượng khách tham dự",
+
+            default:1,
+
+            min:1,
+
+            max:5,
+
+            showOnlyWhenAttending:true,
+
+            stepper:true,
+
+            minusButton:"−",
+
+            plusButton:"+"
+
+        },
 
         submitButton:"GỬI PHẢN HỒI"
+       successMessage:"Cảm ơn bạn đã phản hồi ❤️",
+
+       errorMessage:"Đã có lỗi xảy ra. Vui lòng thử lại."  
 
     },
 
