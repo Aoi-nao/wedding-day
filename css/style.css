@@ -893,3 +893,138 @@ main{
     }
 
 }
+/*==================================================
+    INVITATION
+==================================================*/
+
+.invitation{
+
+    background:#f9f5ef;
+
+    padding:110px 25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+
+.invitation__content{
+
+    max-width:650px;
+
+}
+
+
+
+.invite-heading{
+
+    font-size:42px;
+
+    font-weight:400;
+
+    line-height:1.6;
+
+    color:#4d3d31;
+
+    margin:0;
+
+}
+
+
+
+.invite-divider{
+
+    margin:28px 0;
+
+    font-size:28px;
+
+    color:#c6a878;
+
+    letter-spacing:8px;
+
+}
+
+
+
+.invite-message{
+
+    font-size:22px;
+
+    line-height:2.1;
+
+    color:#5f4a39;
+
+    margin:0;
+
+}
+
+
+
+.invite-heart{
+
+    margin:35px 0;
+
+    font-size:20px;
+
+    color:#c6a878;
+
+}
+
+
+
+.invite-family{
+
+    font-size:22px;
+
+    line-height:2;
+
+    letter-spacing:1px;
+
+    color:#5f4a39;
+
+    margin:0;
+
+}
+
+
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .invitation{
+
+        padding:80px 20px;
+
+    }
+
+    .invite-heading{
+
+        font-size:30px;
+
+        line-height:1.5;
+
+    }
+
+    .invite-message{
+
+        font-size:18px;
+
+        line-height:1.9;
+
+    }
+
+    .invite-family{
+
+        font-size:18px;
+
+    }
+
+}
