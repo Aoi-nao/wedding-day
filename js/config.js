@@ -168,53 +168,85 @@ trân trọng kính mời`,
 
     timeline:{
 
-        title:"LỊCH TRÌNH",
+        title:"LỊCH TRÌNH HÔN LỄ",
+
+        style:"curve",
 
         sections:[
 
             {
 
-                title:"LỄ THÀNH HÔN",
+                side:"NHÀ TRAI",
+
+                icon:"ring",
 
                 events:[
 
                     {
 
-                        time:"11:30",
+                        title:"LỄ THÀNH HÔN",
 
-                        title:"ĐÓN KHÁCH",
+                        time:"",
 
-                        description:"Hân hạnh chào đón Quý khách."
+                        weekday:"",
 
-                    },
+                        solarDate:"",
 
-                    {
-
-                        time:"12:00",
-
-                        title:"KHAI TIỆC",
-
-                        description:"Buổi tiệc chính thức bắt đầu."
+                        lunarDate:""
 
                     },
 
                     {
 
-                        time:"13:00",
+                        title:"TIỆC NHÀ TRAI",
 
-                        title:"NGHI THỨC",
+                        time:"",
 
-                        description:"Cùng chứng kiến khoảnh khắc thiêng liêng của chúng mình."
+                        weekday:"",
+
+                        solarDate:"",
+
+                        lunarDate:""
+
+                    }
+
+                ]
+
+            },
+
+            {
+
+                side:"NHÀ GÁI",
+
+                icon:"flower",
+
+                events:[
+
+                    {
+
+                        title:"LỄ VU QUY",
+
+                        time:"",
+
+                        weekday:"",
+
+                        solarDate:"",
+
+                        lunarDate:""
 
                     },
 
                     {
 
-                        time:"15:00",
+                        title:"TIỆC NHÀ GÁI",
 
-                        title:"CHỤP ẢNH",
+                        time:"",
 
-                        description:"Lưu giữ những kỷ niệm đẹp."
+                        weekday:"",
+
+                        solarDate:"",
+
+                        lunarDate:""
 
                     }
 
@@ -228,97 +260,54 @@ trân trọng kính mời`,
 
 
 
-    /*==================================================
-        GALLERY
-    ==================================================*/
-
-    gallery:{
-
-        title:"KHOẢNH KHẮC",
-
-        subtitle:"Những hình ảnh nhỏ ghi lại hành trình của chúng mình.",
-
-        layout:"masonry",
-
-        columnsMobile:2,
-
-        columnsDesktop:4,
-
-        images:[
-
-            {
-                image:"images/gallery/01.jpg",
-                alt:"Gallery 01"
-            },
-
-            {
-                image:"images/gallery/02.jpg",
-                alt:"Gallery 02"
-            },
-
-            {
-                image:"images/gallery/03.jpg",
-                alt:"Gallery 03"
-            },
-
-            {
-                image:"images/gallery/04.jpg",
-                alt:"Gallery 04"
-            },
-
-            {
-                image:"images/gallery/05.jpg",
-                alt:"Gallery 05"
-            },
-
-            {
-                image:"images/gallery/06.jpg",
-                alt:"Gallery 06"
-            },
-
-            {
-                image:"images/gallery/07.jpg",
-                alt:"Gallery 07"
-            },
-
-            {
-                image:"images/gallery/08.jpg",
-                alt:"Gallery 08"
-            }
-
-        ]
-
-    },
-
-
-
-    /*==================================================
+    
+            /*==================================================
         LOCATION
     ==================================================*/
 
     location:{
 
-    title:"ĐỊA ĐIỂM",
+        title:"ĐỊA ĐIỂM",
 
-    subtitle:"Rất mong được gặp bạn.",
+        subtitle:"Rất mong được đón tiếp bạn.",
 
-    ceremony:{
+        locations:[
 
-        venue:"",
+            {
 
-        address:"",
+                side:"NHÀ TRAI",
 
-        mapEmbed:"",
+                icon:"ring",
 
-        mapLink:""
+                venue:"",
+
+                address:"",
+
+                mapEmbed:"",
+
+                mapLink:""
+
+            },
+
+            {
+
+                side:"NHÀ GÁI",
+
+                icon:"flower",
+
+                venue:"",
+
+                address:"",
+
+                mapEmbed:"",
+
+                mapLink:""
+
+            }
+
+        ]
 
     },
-
-    parking:"",
-
-    note:""
-
-},
 
             /*==================================================
         RSVP
@@ -462,6 +451,69 @@ trân trọng kính mời`,
 
     },
 
+
+
+/*==================================================
+        GALLERY
+    ==================================================*/
+
+    gallery:{
+
+        title:"KHOẢNH KHẮC",
+
+        subtitle:"Những hình ảnh nhỏ ghi lại hành trình của chúng mình.",
+
+        layout:"masonry",
+
+        columnsMobile:2,
+
+        columnsDesktop:4,
+
+        images:[
+
+            {
+                image:"images/gallery/01.jpg",
+                alt:"Gallery 01"
+            },
+
+            {
+                image:"images/gallery/02.jpg",
+                alt:"Gallery 02"
+            },
+
+            {
+                image:"images/gallery/03.jpg",
+                alt:"Gallery 03"
+            },
+
+            {
+                image:"images/gallery/04.jpg",
+                alt:"Gallery 04"
+            },
+
+            {
+                image:"images/gallery/05.jpg",
+                alt:"Gallery 05"
+            },
+
+            {
+                image:"images/gallery/06.jpg",
+                alt:"Gallery 06"
+            },
+
+            {
+                image:"images/gallery/07.jpg",
+                alt:"Gallery 07"
+            },
+
+            {
+                image:"images/gallery/08.jpg",
+                alt:"Gallery 08"
+            }
+
+        ]
+
+    },
 
 
 
