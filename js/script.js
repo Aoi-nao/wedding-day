@@ -60,6 +60,8 @@ function initWebsite(){
 
     loadCouple();
 
+    console.log("Website Initialized");
+
 }
 
 document.addEventListener("DOMContentLoaded",initWebsite);
