@@ -24,7 +24,29 @@ const WEDDING={
     },
 
 
+    /*==================================================
+        SEO
+    ==================================================*/
 
+    seo:{
+
+        title:"CHUN & DAM | Wedding Invitation",
+
+        description:"Wedding Invitation of Chun & Dam",
+
+        keywords:[
+            "Wedding",
+            "Wedding Invitation",
+            "CHUN",
+            "DAM",
+            "17 October 2026"
+        ],
+
+        image:"images/cover.jpg",
+
+        favicon:"images/favicon.png"
+
+    },
     /*==================================================
         OPENING
     ==================================================*/
@@ -57,23 +79,29 @@ trân trọng kính mời`,
 
 
 
-    /*==================================================
+        /*==================================================
         HERO
     ==================================================*/
 
     hero:{
 
-        quote:"Together is a beautiful place to be"
+        quote:"Together is a beautiful place to be",
+
+        showDivider:true
 
     },
 
 
 
-    /*==================================================
+        /*==================================================
         COUPLE
     ==================================================*/
 
     couple:{
+
+        title:"CÔ DÂU & CHÚ RỂ",
+
+        subtitle:"Hôm nay chúng mình hạnh phúc vì có bạn ở đây.",
 
         bride:{
 
@@ -84,8 +112,6 @@ trân trọng kính mời`,
             image:"images/bride.jpg"
 
         },
-
-
 
         groom:{
 
@@ -272,26 +298,29 @@ trân trọng kính mời`,
 
     location:{
 
-        title:"ĐỊA ĐIỂM",
+    title:"ĐỊA ĐIỂM",
 
-        ceremony:{
+    subtitle:"Rất mong được gặp bạn.",
 
-            venue:"",
+    ceremony:{
 
-            address:"",
+        venue:"",
 
-            mapEmbed:"",
+        address:"",
 
-            mapLink:""
+        mapEmbed:"",
 
-        },
-
-        parking:"",
-
-        note:""
+        mapLink:""
 
     },
-      /*==================================================
+
+    parking:"",
+
+    note:""
+
+},
+
+        /*==================================================
         RSVP
     ==================================================*/
 
@@ -299,13 +328,60 @@ trân trọng kính mời`,
 
         title:"XÁC NHẬN THAM DỰ",
 
-        subtitle:"Rất mong nhận được phản hồi từ bạn.",
+        subtitle:"Sự phản hồi của bạn sẽ giúp chúng mình chuẩn bị chu đáo hơn.",
 
-        buttonText:"XÁC NHẬN",
+        deadline:"01/10/2026",
 
-        url:""
+        options:[
+
+            {
+
+                id:"attending",
+
+                text:"💚 Mình sẽ tham dự"
+
+            },
+
+            {
+
+                id:"not-attending",
+
+                text:"🤍 Xin lỗi, mình bận mất rồi"
+
+            }
+
+        ],
+
+        allowGuestCount:true,
+
+        maxGuest:5,
+
+        submitButton:"GỬI PHẢN HỒI"
 
     },
+
+
+
+        /*==================================================
+        WEDDING WISHES
+    ==================================================*/
+
+    wishes:{
+
+        title:"LỜI CHÚC",
+
+        subtitle:"Những lời chúc thân thương sẽ là món quà quý giá nhất dành cho chúng mình ❤️",
+
+        placeholder:"Viết lời chúc của bạn tại đây...",
+
+        submitButton:"GỬI LỜI CHÚC",
+
+        emptyMessage:"Hãy là người đầu tiên gửi lời chúc ❤️",
+
+        maxLength:300
+
+    },
+
 
 
 
