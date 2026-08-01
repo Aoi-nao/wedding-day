@@ -363,6 +363,51 @@ trân trọng kính mời`,
 
 
         /*==================================================
+        GIFT
+    ==================================================*/
+
+    gift:{
+
+        title:"MỪNG CƯỚI",
+
+        subtitle:"Sự hiện diện của bạn đã là món quà quý giá nhất dành cho chúng mình.\nNếu muốn gửi thêm một chút yêu thương, bạn có thể quét mã QR bên dưới ❤️",
+
+        show:true,
+
+        bride:{
+
+            title:"Mừng cưới cô dâu",
+
+            bank:"",
+
+            accountName:"",
+
+            accountNumber:"",
+
+            qr:"images/qr-bride.png"
+
+        },
+
+        groom:{
+
+            title:"Mừng cưới chú rể",
+
+            bank:"",
+
+            accountName:"",
+
+            accountNumber:"",
+
+            qr:"images/qr-groom.png"
+
+        }
+
+    },
+
+
+
+    
+        /*==================================================
         WEDDING WISHES
     ==================================================*/
 
