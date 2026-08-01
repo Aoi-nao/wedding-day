@@ -60,6 +60,12 @@ function initWebsite(){
 
     loadCouple();
 
+    startCountdown();
+
+    loadTimeline();
+
+    loadLocation();
+
     console.log("Website Initialized");
 
 }
@@ -207,5 +213,216 @@ function loadCouple(){
 
     rightImage.alt=
     WEDDING.couple.groom.name;
+
+}
+
+
+
+/*==================================================
+    COUNTDOWN
+==================================================*/
+
+const dayValue=document.getElementById("dayValue");
+const hourValue=document.getElementById("hourValue");
+const minuteValue=document.getElementById("minuteValue");
+const secondValue=document.getElementById("secondValue");
+
+function startCountdown(){
+
+    const target=new Date(WEDDING.event.date).getTime();
+
+    function update(){
+
+        const now=Date.now();
+
+        const distance=target-now;
+
+        if(distance<=0){
+
+            dayValue.textContent="0";
+            hourValue.textContent="0";
+            minuteValue.textContent="0";
+            secondValue.textContent="0";
+
+            return;
+
+        }
+
+        const day=Math.floor(distance/(1000*60*60*24));
+
+        const hour=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+        const minute=Math.floor((distance%(1000*60*60))/(1000*60));
+
+        const second=Math.floor((distance%(1000*60))/1000);
+
+        dayValue.textContent=day;
+
+        hourValue.textContent=hour.toString().padStart(2,"0");
+
+        minuteValue.textContent=minute.toString().padStart(2,"0");
+
+        secondValue.textContent=second.toString().padStart(2,"0");
+
+    }
+
+    update();
+
+    setInterval(update,1000);
+
+}
+
+
+
+/*==================================================
+    TIMELINE
+==================================================*/
+
+const timelineTitle=document.getElementById("timelineTitle");
+const timelineContainer=document.getElementById("timelineContainer");
+
+function loadTimeline(){
+
+    timelineTitle.textContent=WEDDING.timeline.title;
+
+    timelineContainer.innerHTML="";
+
+    WEDDING.timeline.sections.forEach(section=>{
+
+        const card=document.createElement("div");
+
+        card.className="timeline-card";
+
+        let eventsHTML="";
+
+        section.events.forEach(event=>{
+
+            eventsHTML+=`
+
+            <div class="timeline-event">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-event-title">
+
+                    ${event.title}
+
+                </div>
+
+                <div class="timeline-event-time">
+
+                    Vào lúc ${event.time}<br>
+
+                    ${event.weekday}<br>
+
+                    ${event.solarDate}<br>
+
+                    ${event.lunarDate}
+
+                </div>
+
+            </div>
+
+            `;
+
+        });
+
+        card.innerHTML=`
+
+            <div class="timeline-side">
+
+                <div class="timeline-icon">
+
+                    ${section.icon==="ring"?"💍":"🌸"}
+
+                </div>
+
+                <h3>${section.side}</h3>
+
+            </div>
+
+            ${eventsHTML}
+
+        `;
+
+        timelineContainer.appendChild(card);
+
+    });
+
+}
+
+
+
+/*==================================================
+    LOCATION
+==================================================*/
+
+const locationTitle=document.getElementById("locationTitle");
+const locationSubtitle=document.getElementById("locationSubtitle");
+const locationContainer=document.getElementById("locationContainer");
+
+function loadLocation(){
+
+    locationTitle.textContent=WEDDING.location.title;
+
+    locationSubtitle.textContent=WEDDING.location.subtitle;
+
+    locationContainer.innerHTML="";
+
+    WEDDING.location.locations.forEach(location=>{
+
+        const card=document.createElement("div");
+
+        card.className="location-card";
+
+        card.innerHTML=`
+
+            <div class="location-header">
+
+                <div class="location-header-icon">
+
+                    ${location.icon==="ring"?"💍":"🌸"}
+
+                </div>
+
+                <h3>${location.side}</h3>
+
+            </div>
+
+            <div class="location-venue">
+
+                ${location.venue}
+
+            </div>
+
+            <div class="location-address">
+
+                ${location.address}
+
+            </div>
+
+            <div class="location-map">
+
+                ${location.mapEmbed}
+
+            </div>
+
+            <a
+
+                class="location-button"
+
+                href="${location.mapLink}"
+
+                target="_blank">
+
+                Chỉ đường
+
+            </a>
+
+        `;
+
+        locationContainer.appendChild(card);
+
+    });
 
 }
