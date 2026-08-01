@@ -130,3 +130,80 @@ musicButton.addEventListener("click",()=>{
     }
 
 });
+
+
+
+/*==================================================
+    HERO
+==================================================*/
+
+function loadHero(){
+
+    heroImage.src=
+    WEDDING.hero.image;
+
+    heroImage.alt=
+    WEDDING.hero.names;
+
+    heroQuote.textContent=
+    WEDDING.hero.quote;
+
+    heroNames.textContent=
+    WEDDING.hero.names;
+
+    heroDate.textContent=
+    WEDDING.hero.date;
+
+}
+
+
+/*==================================================
+    INVITATION
+==================================================*/
+
+function loadInvitation(){
+
+    inviteHeading.innerHTML=
+    WEDDING.invitation.heading.replace(/\n/g,"<br>");
+
+    inviteMessage.innerHTML=
+    WEDDING.invitation.message.replace(/\n/g,"<br>");
+
+    inviteFamily.innerHTML=
+    WEDDING.invitation.family.replace(/\n/g,"<br>");
+
+}
+
+
+/*==================================================
+    COUPLE
+==================================================*/
+
+function loadCouple(){
+
+    leftRole.textContent=
+    WEDDING.couple.bride.role;
+
+    leftName.textContent=
+    WEDDING.couple.bride.name;
+
+    leftImage.src=
+    WEDDING.couple.bride.image;
+
+    leftImage.alt=
+    WEDDING.couple.bride.name;
+
+
+    rightRole.textContent=
+    WEDDING.couple.groom.role;
+
+    rightName.textContent=
+    WEDDING.couple.groom.name;
+
+    rightImage.src=
+    WEDDING.couple.groom.image;
+
+    rightImage.alt=
+    WEDDING.couple.groom.name;
+
+}
