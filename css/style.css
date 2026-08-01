@@ -293,23 +293,71 @@ main{
 
 .couple{
 
-    min-height:100vh;
+    background:#faf7f2;
+
+    padding:110px 30px 120px;
 
     display:flex;
 
+    flex-wrap:wrap;
+
     justify-content:center;
 
-    align-items:center;
+    gap:80px;
 
-    gap:90px;
-
-    padding:120px 40px;
-
-    background:#F8F5F1;
+    position:relative;
 
 }
 
+
+
+.couple__header{
+
+    width:100%;
+
+    text-align:center;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.couple__subtitle{
+
+    font-size:13px;
+
+    letter-spacing:7px;
+
+    color:#a78963;
+
+    text-transform:uppercase;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.couple__title{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:42px;
+
+    font-weight:400;
+
+    color:#4e4035;
+
+    line-height:1.4;
+
+}
+
+
+
 .person{
+
+    width:320px;
 
     display:flex;
 
@@ -317,43 +365,56 @@ main{
 
     align-items:center;
 
-    flex:0 1 320px;
-
 }
+
+
 
 .person__role{
 
-    font-size:14px;
+    font-size:13px;
 
-    letter-spacing:5px;
+    letter-spacing:6px;
 
-    color:#A08973;
+    color:#9d8764;
 
     margin-bottom:28px;
 
-}
+    text-transform:uppercase;
 
+}
 .person__frame{
 
     width:280px;
 
     height:360px;
 
-    padding:8px;
+    border:2px solid #d9c2a0;
 
-    background:#FFFFFF;
+    border-radius:160px 160px 20px 20px;
 
-    border-radius:
+    overflow:hidden;
 
-    180px 180px 24px 24px;
+    background:#fff;
 
-    box-shadow:
+    padding:10px;
 
-    0 18px 45px
+    box-shadow:0 18px 40px rgba(0,0,0,.08);
 
-    rgba(0,0,0,.08);
+    transition:.35s ease;
 
 }
+
+
+
+.person__frame:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 24px 50px rgba(0,0,0,.12);
+
+}
+
+
 
 .person__image{
 
@@ -363,47 +424,119 @@ main{
 
     object-fit:cover;
 
-    border-radius:
+    border-radius:150px 150px 12px 12px;
 
-    172px 172px 18px 18px;
-
-}
-
-.person:first-child .person__image{
-
-    object-position:right center;
+    display:block;
 
 }
 
-.person:last-child .person__image{
 
-    object-position:left center;
-
-}
 
 .person__name{
 
-    margin-top:30px;
+    margin-top:28px;
+
+    font-family:"Cormorant Garamond",serif;
 
     font-size:42px;
 
-    font-weight:400;
+    font-weight:500;
 
-    letter-spacing:8px;
+    color:#4e4035;
+
+    letter-spacing:2px;
 
 }
+
+
 
 .couple__heart{
 
-    font-size:34px;
+    display:flex;
 
-    color:#C8A98A;
+    align-items:center;
 
-    transform:translateY(-20px);
+    justify-content:center;
+
+    font-size:40px;
+
+    color:#c8a97e;
+
+    margin-top:150px;
 
 }
 
 
+
+@media(max-width:900px){
+
+    .couple{
+
+        gap:55px;
+
+        padding:90px 24px;
+
+    }
+
+    .couple__title{
+
+        font-size:34px;
+
+    }
+
+    .person{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .couple__heart{
+
+        width:100%;
+
+        margin:0;
+
+        order:2;
+
+    }
+
+}
+
+
+
+@media(max-width:600px){
+
+    .person__frame{
+
+        width:240px;
+
+        height:315px;
+
+        border-radius:140px 140px 18px 18px;
+
+    }
+
+    .person__image{
+
+        border-radius:130px 130px 10px 10px;
+
+    }
+
+    .person__name{
+
+        font-size:34px;
+
+    }
+
+    .couple__title{
+
+        font-size:28px;
+
+    }
+
+}
 
 /*==================================================
     PETALS
