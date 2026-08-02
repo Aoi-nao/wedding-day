@@ -377,7 +377,7 @@ trân trọng kính mời`,
 
         },
 
-        submitButton:"GỬI PHẢN HỒI"
+        submitButton:"GỬI PHẢN HỒI",
        successMessage:"Cảm ơn bạn đã phản hồi ❤️",
 
        errorMessage:"Đã có lỗi xảy ra. Vui lòng thử lại."  
