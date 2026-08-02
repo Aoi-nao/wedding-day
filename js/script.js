@@ -175,14 +175,14 @@ function loadHero(){
 
 function loadInvitation(){
 
-    inviteHeading.innerHTML=
-    WEDDING.invitation.heading.replace(/\n/g,"<br>");
+    inviteHeading.innerHTML =
+    WEDDING.opening.heading.replace(/\n/g,"<br>");
 
-    inviteMessage.innerHTML=
-    WEDDING.invitation.message.replace(/\n/g,"<br>");
+    inviteMessage.innerHTML =
+    WEDDING.opening.message.replace(/\n/g,"<br>");
 
-    inviteFamily.innerHTML=
-    WEDDING.invitation.family.replace(/\n/g,"<br>");
+    inviteFamily.innerHTML =
+    WEDDING.opening.family.replace(/\n/g,"<br>");
 
 }
 
