@@ -90,14 +90,14 @@ function loadOpening(){
 
     openingDate.textContent=WEDDING.opening.date;
 
-    openingHeading.innerHTML=
-    WEDDING.invitation.heading.replace(/\n/g,"<br>");
+    openingHeading.innerHTML =
+    WEDDING.opening.heading.replace(/\n/g,"<br>");
 
-    openingMessage.innerHTML=
-    WEDDING.invitation.message.replace(/\n/g,"<br>");
+    openingMessage.innerHTML =
+    WEDDING.opening.message.replace(/\n/g,"<br>");
 
-    openingFamily.innerHTML=
-    WEDDING.invitation.family.replace(/\n/g,"<br>");
+    openingFamily.innerHTML =
+    WEDDING.opening.family.replace(/\n/g,"<br>");
 
 }
 
