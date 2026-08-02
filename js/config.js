@@ -53,29 +53,19 @@ const WEDDING={
 
     opening:{
 
-        background:"images/cover.jpg",
+    background:"images/cover.jpg",
 
-        overlay:0.45,
+    overlay:0.45,
 
-        title:"WEDDING INVITATION",
+    title:"WEDDING INVITATION",
 
-        showCoupleNames:true,
+    showCoupleNames:true,
 
-        showDate:true,
+    showDate:true,
 
-        heading:`Một ngày đặc biệt,
-một khoảnh khắc đáng nhớ`,
+    buttonText:"MỞ THIỆP"
 
-        message:`Chúng tôi rất hạnh phúc
-khi được chia sẻ niềm vui này
-cùng bạn`,
-
-        family:`Gia đình hai bên
-trân trọng kính mời`,
-
-        buttonText:"MỞ THIỆP"
-
-    },
+},
 
 
 
