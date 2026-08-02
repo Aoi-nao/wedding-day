@@ -75,11 +75,21 @@ const WEDDING={
 
     hero:{
 
-        quote:"Together is a beautiful place to be",
+    quote:"Together is a beautiful place to be",
 
-        showDivider:true
+    showDivider:true,
 
-    },
+    heading:`Một ngày đặc biệt,
+một khoảnh khắc đáng nhớ`,
+
+    message:`Chúng tôi rất hạnh phúc
+khi được chia sẻ niềm vui này
+cùng bạn`,
+
+    family:`Gia đình hai bên
+trân trọng kính mời`
+
+},
 
 
 
