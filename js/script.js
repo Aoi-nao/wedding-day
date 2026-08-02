@@ -176,13 +176,13 @@ function loadHero(){
 function loadInvitation(){
 
     inviteHeading.innerHTML =
-    WEDDING.opening.heading.replace(/\n/g,"<br>");
+    WEDDING.hero.heading.replace(/\n/g,"<br>");
 
     inviteMessage.innerHTML =
-    WEDDING.opening.message.replace(/\n/g,"<br>");
+    WEDDING.hero.message.replace(/\n/g,"<br>");
 
     inviteFamily.innerHTML =
-    WEDDING.opening.family.replace(/\n/g,"<br>");
+    WEDDING.hero.family.replace(/\n/g,"<br>");
 
 }
 
